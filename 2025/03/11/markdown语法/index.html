@@ -298,11 +298,11 @@
 <p>标题共有六级，从一级标题到六级标题字体越来越小</p>
 <p>注意：为了保证兼容性，尽量保证<code>#</code>与文字之间不要相连</p>
 <p>例：</p>
-<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs clean"># 一级标题<br>## 二级标题<br>### 三级标题<br></code></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-section"># 一级标题</span><br><span class="hljs-section">## 二级标题</span><br><span class="hljs-section">### 三级标题</span><br></code></pre></td></tr></table></figure>
 
 <h3 id="第二种："><a href="#第二种：" class="headerlink" title="第二种："></a>第二种：</h3><p>使用<code>=</code>和<code>-</code>划出一级标题和二级标题，这种方式与输入的<code>=</code>或<code>-</code>个数无关，在这两种符号之上的内容将会被当做标题</p>
 <p>例：</p>
-<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><span class="hljs-section">一级标题</span><br><span class="hljs-section">=======</span><br><span class="hljs-section">二级标题</span><br><span class="hljs-section">-------</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-section">一级标题</span><br><span class="hljs-section">=======</span><br><span class="hljs-section">二级标题</span><br><span class="hljs-section">-------</span><br></code></pre></td></tr></table></figure>
 
 <h1 id="代码语法"><a href="#代码语法" class="headerlink" title="代码语法"></a>代码语法</h1><p>要将单词或短语表示为代码，请将其包裹在反引号<code>`</code>中。</p>
 <p>例:</p>
@@ -355,10 +355,9 @@
 <p>比如：</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs markdown">这是一句<br>毫无意义<br>的话<br><br>这是另外一句毫无意义的话<br></code></pre></td></tr></table></figure>
 <p>将会变成：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs">这是一句 毫无意义 的话<br>这是另外一句毫无意义的话<br></code></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs markdown">这是一句 毫无意义 的话<br>这是另外一句毫无意义的话<br></code></pre></td></tr></table></figure>
 
 <h1 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h1><p>一条分割线可以由<code>*</code>,<code>-</code>,<code>_</code>三种符号的至少三个表示</p>
-<p>例：</p>
 <p><code>*****</code></p>
 <hr>
 <p><code>_____</code></p>
@@ -368,7 +367,7 @@
 <h1 id="高级技巧"><a href="#高级技巧" class="headerlink" title="高级技巧"></a>高级技巧</h1><p>不在 Markdown 涵盖范围之内的标签，都可以直接在文档里面用 HTML 撰写。</p>
 <p>目前支持的 HTML 元素有：<code>&lt;kbd&gt;</code>、<code>&lt;b&gt;</code>、<code>&lt;i&gt;</code>、<code>&lt;em&gt;</code>、<code>&lt;sup&gt;</code>、<code>&lt;sub&gt;</code>等 </p>
 <p>如：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs xml">使用 <span class="hljs-tag">&lt;<span class="hljs-name">kbd</span>&gt;</span>Win<span class="hljs-tag">&lt;/<span class="hljs-name">kbd</span>&gt;</span>+<span class="hljs-tag">&lt;<span class="hljs-name">kbd</span>&gt;</span>Shift<span class="hljs-tag">&lt;/<span class="hljs-name">kbd</span>&gt;</span>+<span class="hljs-tag">&lt;<span class="hljs-name">kbd</span>&gt;</span>S<span class="hljs-tag">&lt;/<span class="hljs-name">kbd</span>&gt;</span> 截图<br><br>x<span class="hljs-tag">&lt;<span class="hljs-name">sup</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">sup</span>&gt;</span>+x+1=0<br></code></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs markdown">使用 <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">kbd</span>&gt;</span></span>Win<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">kbd</span>&gt;</span></span>+<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">kbd</span>&gt;</span></span>Shift<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">kbd</span>&gt;</span></span>+<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">kbd</span>&gt;</span></span>S<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">kbd</span>&gt;</span></span> 截图<br><br>x<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">sup</span>&gt;</span></span>2<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">sup</span>&gt;</span></span>+x+1=0<br></code></pre></td></tr></table></figure>
 <p>效果：</p>
 <p>使用 <kbd>Win</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd> 截图</p>
 <p>x<sup>2</sup>+x+1&#x3D;0</p>
@@ -382,14 +381,14 @@ A[方形] --&gt;B(圆角)
 
 <h1 id="换行语法"><a href="#换行语法" class="headerlink" title="换行语法"></a>换行语法</h1><p>在一行的末尾输入两个及以上的空格，然后回车，便可创建一个换行</p>
 <p>下一例子将用下划线<code>_</code>表示末尾空格</p>
-<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs maxima">这是第一句话。<span class="hljs-symbol">__</span><br>这是第二句话，与上一句话相连但是是新的一行。<br><br>这是第三句话，与上不相连所以是新的段落。<br></code></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs markdown">这是第一句话。__<br>这是第二句话，与上一句话相连但是是新的一行。<br><br>这是第三句话，与上不相连所以是新的段落。<br></code></pre></td></tr></table></figure>
 <p>结果：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs">这是第一句话。<br>这是第二句话，与上一句话相连但是是新的一行。<br><br>这是第三句话，与上不相连所以是新的段落。<br></code></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs markdown">这是第一句话。<br>这是第二句话，与上一句话相连但是是新的一行。<br><br>这是第三句话，与上不相连所以是新的段落。<br></code></pre></td></tr></table></figure>
 
 <p>虽然几乎所有markdown应用程序都支持句末空格换行，但是由于在编辑器中难以直接看到空格，因此还有另外一种换行方式：使用HTML的<code>&lt;br&gt;</code>标签</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs xml">这是第一句话。<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span><br>这是第二句话，与上一句话相连但是是新的一行。<br><br>这是第三句话，与上不相连所以是新的段落。<br></code></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs markdown">这是第一句话。<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span></span><br>这是第二句话，与上一句话相连但是是新的一行。<br><br>这是第三句话，与上不相连所以是新的段落。<br></code></pre></td></tr></table></figure>
 <p>结果：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs">这是第一句话。<br>这是第二句话，与上一句话相连但是是新的一行。<br><br>这是第三句话，与上不相连所以是新的段落。<br></code></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs markdown">这是第一句话。<br>这是第二句话，与上一句话相连但是是新的一行。<br><br>这是第三句话，与上不相连所以是新的段落。<br></code></pre></td></tr></table></figure>
 
 <p>另外，还有几种轻量级标记语言支持在行末添加<code>\</code>换行，但是为了兼容性，还是更推荐使用<code>结尾空格</code>和<code>&lt;br&gt;</code>两种方式换行</p>
 <h1 id="链接语法"><a href="#链接语法" class="headerlink" title="链接语法"></a>链接语法</h1><h3 id="文字链接"><a href="#文字链接" class="headerlink" title="文字链接"></a>文字链接</h3><p>文字超链接的一种方法是<code>[超链接显示文字](超链接网址 超链接title)</code></p>
@@ -402,22 +401,22 @@ A[方形] --&gt;B(圆角)
 </ul>
 <p>而另外一种写法则是引用式，更适合用于常用到的链接</p>
 <p>例：</p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs elixir">[github]<span class="hljs-symbol">:https</span><span class="hljs-symbol">://github</span>.com <span class="hljs-string">&quot;github&quot;</span><br><br>[gitHub]是一个面向开源及私有软件项目的托管平台<br></code></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs markdown">[<span class="hljs-symbol">github</span>]:<span class="hljs-link">https://github.com &quot;github&quot;</span><br><br>[gitHub]是一个面向开源及私有软件项目的托管平台<br></code></pre></td></tr></table></figure>
 <p>效果：</p>
 <p><a target="_blank" rel="noopener" href="https://github.com/" title="github">gitHub</a>是一个面向开源及私有软件项目的托管平台</p>
 <p>尖括号可以快速把网址变为可点击的链接</p>
-<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs 1c">&lt;https<span class="hljs-punctuation">:</span><span class="hljs-comment">//github.com&gt;</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="language-xml">&lt;https://github.com&gt;</span><br></code></pre></td></tr></table></figure>
 <p>效果：<br><a target="_blank" rel="noopener" href="https://github.com/">https://github.com</a></p>
 <h3 id="图片链接"><a href="#图片链接" class="headerlink" title="图片链接"></a>图片链接</h3><p>图片链接和文字链接很像，只是在最前面加上一个“!”</p>
 <p>例如:</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs ruby">这里是我的头像：![我的头像](<span class="hljs-regexp">/img/avatar</span>.jpg)<br><br>[我的头像]<span class="hljs-symbol">:/img/avatar</span>.jpg <span class="hljs-string">&quot;我的头像&quot;</span><br><br>这也是我头像：![我的头像]<br></code></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs markdown">这里是我的头像：![<span class="hljs-string">我的头像</span>](<span class="hljs-link">/img/avatar.jpg</span>)<br><br>[<span class="hljs-symbol">我的头像</span>]:<span class="hljs-link">/img/avatar.jpg &quot;我的头像&quot;</span><br><br>这也是我头像：![我的头像]<br></code></pre></td></tr></table></figure>
 <p>效果：</p>
 <p>这里是我的头像：<img src="/img/avatar.jpg" srcset="/img/loading.gif" lazyload alt="我的头像"></p>
 <p>这也是我的头像：<img src="/img/avatar.jpg" srcset="/img/loading.gif" lazyload alt="头像" title="我的头像"></p>
 <h1 id="列表语法"><a href="#列表语法" class="headerlink" title="列表语法"></a>列表语法</h1><h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><p>在各项前加上<code>数字.</code>来创建有序列表，例如<code>1.xxx</code>，<code>2.xxx</code></p>
 <p>注：有序列表的第一个序号决定了整个列表序号，因此最好保证第一个序号是<code>1.</code>（你也可以不用<code>1.</code>开头，但是不建议这样做）</p>
 <p>例：</p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">1</span>. 第一项<br><span class="hljs-attribute">4</span>. 使用“<span class="hljs-number">4</span>.”但是显示“<span class="hljs-number">2</span>.”<br><span class="hljs-attribute">5</span>. 使用“<span class="hljs-number">5</span>.”但是显示“<span class="hljs-number">3</span>.” <br>    <span class="hljs-attribute">1</span>. 子列表<br>        <span class="hljs-attribute">1</span>. 子子列表<span class="hljs-number">1</span><br>        <span class="hljs-attribute">2</span>. 子子列表<span class="hljs-number">2</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-bullet">1.</span> 第一项<br><span class="hljs-bullet">4.</span> 使用“4.”但是显示“2.”<br><span class="hljs-bullet">5.</span> 使用“5.”但是显示“3.” <br><span class="hljs-bullet">    1.</span> 子列表<br><span class="hljs-bullet">        1.</span> 子子列表1<br><span class="hljs-bullet">        2.</span> 子子列表2<br></code></pre></td></tr></table></figure>
 <p>效果：</p>
 <ol>
 <li>第一项</li>
@@ -498,7 +497,7 @@ A[方形] --&gt;B(圆角)
 <p><strong>这是一整个加粗了的段落<br><br>下面一行也不例外</strong></p>
 <h3 id="斜体"><a href="#斜体" class="headerlink" title="斜体"></a>斜体</h3><p>要使用斜体，只需要在需要变为斜体的文本或短语前后各添加一个<code>*</code>或一个<code>_</code></p>
 <p>例:</p>
-<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc">这是一个<span class="hljs-strong">*斜体*</span>的词组&lt;br&gt;<br><span class="hljs-emphasis">_这是一个斜体的句子_</span><br><br><span class="hljs-strong">*这是一整个斜体的段落&lt;br&gt;</span><br><span class="hljs-strong">下面一行也不例外*</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs markdown">这是一个<span class="hljs-emphasis">*斜体*</span>的词组<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span></span><br><span class="hljs-emphasis">_这是一个斜体的句子_</span><br><br><span class="hljs-emphasis">*这是一整个斜体的段落<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span></span></span><br><span class="hljs-emphasis">下面一行也不例外*</span><br></code></pre></td></tr></table></figure>
 
 <p>效果：</p>
 <p>这是一个<em>斜体</em>的词组<br><br><em>这是一个斜体的句子</em></p>
@@ -512,13 +511,13 @@ A[方形] --&gt;B(圆角)
 <p><em><strong>这是一整个加粗并斜体的段落<br><br>下面一行也不例外</strong></em></p>
 <h2 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a>数学公式</h2><p>可以使用两个美元<code>$$</code>包裹Tex或者LaTex公式实现独立的数学公式，也可以只用一个<code>$</code>实现插入到文字中的数学公式</p>
 <p>例：</p>
-<figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs gams">这是一个求极限的算式： <span class="hljs-symbol">$</span>\lim_&#123;x\to0&#125;\<span class="hljs-built_in">frac</span>&#123;x&#125;&#123;\<span class="hljs-built_in">sin</span> x&#125;<span class="hljs-symbol">$</span>&lt;br&gt;<br>这是求解一元二次方程的实数根的方程<br><br><span class="hljs-symbol">$</span><span class="hljs-symbol">$</span><br>x=\<span class="hljs-built_in">frac</span>&#123;-b\pm\<span class="hljs-built_in">sqrt</span>&#123;b^<span class="hljs-number">2</span><span class="hljs-number">-4</span>ac&#125;&#125;&#123;<span class="hljs-number">2</span>a&#125;<br><span class="hljs-symbol">$</span><span class="hljs-symbol">$</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs markdown">这是一个求极限的算式： $\lim<span class="hljs-emphasis">_&#123;x\to0&#125;\frac&#123;x&#125;&#123;\sin x&#125;$<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span></span></span><br><span class="hljs-emphasis">这是求解一元二次方程的实数根的方程</span><br><span class="hljs-emphasis"></span><br><span class="hljs-emphasis">$$</span><br><span class="hljs-emphasis">x=\frac&#123;-b\pm\sqrt&#123;b^2-4ac&#125;&#125;&#123;2a&#125;</span><br><span class="hljs-emphasis">$$</span><br></code></pre></td></tr></table></figure>
 <p>效果：</p>
 <p>这是一个求极限的算式： $\lim_{x\to0}\frac{x}{\sin x}$<br><br>这是求解一元二次方程的实数根的方程</p>
 <p>$$<br>x&#x3D;\frac{-b\pm\sqrt{b^2-4ac}}{2a}<br>$$</p>
 <h1 id="引用语法"><a href="#引用语法" class="headerlink" title="引用语法"></a>引用语法</h1><p>如果你想对某个部分进行引用说明，那么可以使用<code>&gt;</code>来表示引用</p>
 <p>例：</p>
-<figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs nestedtext">锲而舍之，朽木不折；锲而不舍，金石可镂。<br>  <span class="hljs-punctuation">&gt;</span> <span class="hljs-string">取自《劝学》</span><br><br>少壮不努力，老大徒伤悲。<br>  <span class="hljs-punctuation">&gt;</span> <span class="hljs-string">取自《长歌行》</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs markdown">锲而舍之，朽木不折；锲而不舍，金石可镂。<br>  &gt; 取自《劝学》<br><br>少壮不努力，老大徒伤悲。<br>  &gt; 取自《长歌行》<br></code></pre></td></tr></table></figure>
 <p>效果：</p>
 <p>锲而舍之，朽木不折；锲而不舍，金石可镂。</p>
 <blockquote>
@@ -530,7 +529,7 @@ A[方形] --&gt;B(圆角)
 </blockquote>
 <h3 id="嵌套引用"><a href="#嵌套引用" class="headerlink" title="嵌套引用"></a>嵌套引用</h3><p>引用块可以嵌套引用。不同个数的<code>&gt;</code>代表不同层级的引用</p>
 <p>例：</p>
-<figure class="highlight node-repl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs node-repl"><span class="hljs-meta prompt_">&gt;</span> <span class="language-javascript">只有一个<span class="hljs-string">&#x27;&gt;&#x27;</span>&lt;br&gt;</span><br><span class="hljs-meta prompt_">&gt;</span> <span class="language-javascript">只有一个<span class="hljs-string">&#x27;&gt;&#x27;</span></span><br>&gt;&gt; 有两个&#x27;&gt;&#x27;<br></code></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-quote">&gt; 只有一个&#x27;&gt;&#x27;<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span></span></span><br><span class="hljs-quote">&gt; 只有一个&#x27;&gt;&#x27;</span><br>&gt;&gt; 有两个&#x27;&gt;&#x27;<br></code></pre></td></tr></table></figure>
 <p>效果：</p>
 <blockquote>
 <p>只有一个’&gt;’<br><br>只有一个’&gt;’</p>
@@ -540,7 +539,7 @@ A[方形] --&gt;B(圆角)
 </blockquote>
 <h3 id="带有其他元素的引用"><a href="#带有其他元素的引用" class="headerlink" title="带有其他元素的引用"></a>带有其他元素的引用</h3><p>块引用内可以加入markdown其他类型的元素，例如列表，标题等</p>
 <p>例：</p>
-<figure class="highlight node-repl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs node-repl"><span class="hljs-meta prompt_">&gt;</span> <span class="language-javascript">### 标题</span><br><span class="hljs-meta prompt_">&gt;</span> <br><span class="hljs-meta prompt_">&gt;</span> <span class="language-javascript">- 列表<span class="hljs-number">1</span></span><br><span class="hljs-meta prompt_">&gt;</span> <span class="language-javascript">- 列表<span class="hljs-number">2</span></span><br><span class="hljs-meta prompt_">&gt;</span> <br><span class="hljs-meta prompt_">&gt;</span> <span class="language-javascript">name1|name2|name3</span><br><span class="hljs-meta prompt_">&gt;</span> <span class="language-javascript">-----|-----|-----</span><br><span class="hljs-meta prompt_">&gt;</span> <span class="language-javascript">item1|item2|item3</span><br><span class="hljs-meta prompt_">&gt;</span><br><span class="hljs-meta prompt_">&gt;</span> <span class="language-javascript">*斜体* **加粗** ***加粗斜体***</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-quote">&gt; ### 标题</span><br><span class="hljs-quote">&gt; </span><br><span class="hljs-quote">&gt; - 列表1</span><br><span class="hljs-quote">&gt; - 列表2</span><br><span class="hljs-quote">&gt; </span><br><span class="hljs-quote">&gt; name1|name2|name3</span><br><span class="hljs-quote">&gt; -----|-----|-----</span><br><span class="hljs-quote">&gt; item1|item2|item3</span><br><span class="hljs-quote">&gt;</span><br><span class="hljs-quote">&gt; <span class="hljs-emphasis">*斜体*</span> <span class="hljs-strong">**加粗**</span> <span class="hljs-strong">**<span class="hljs-emphasis">*加粗斜体*</span>**</span></span><br></code></pre></td></tr></table></figure>
 <p>效果：</p>
 <blockquote>
 <h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><ul>
@@ -563,7 +562,7 @@ A[方形] --&gt;B(圆角)
 </tbody></table>
 <p><em>斜体</em> <strong>加粗</strong> <em><strong>加粗斜体</strong></em></p>
 </blockquote>
-<h1 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h1><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><span class="hljs-bullet">* </span>\\<br><span class="hljs-bullet">* </span>\`<br><span class="hljs-bullet">* </span>\*<br><span class="hljs-bullet">* </span>\_<br><span class="hljs-bullet">* </span>\&#123;&#125;<br><span class="hljs-bullet">* </span>\[]<br><span class="hljs-bullet">* </span>\()<br><span class="hljs-bullet">* </span>\#<br><span class="hljs-bullet">* </span>\+<br><span class="hljs-bullet">* </span>\-<br><span class="hljs-bullet">* </span>\.<br><span class="hljs-bullet">* </span>\!<br><span class="hljs-bullet">* </span>\|<br></code></pre></td></tr></table></figure>
+<h1 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h1><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-bullet">*</span> \\<br><span class="hljs-bullet">*</span> \`<br><span class="hljs-bullet">*</span> \*<br><span class="hljs-bullet">*</span> \_<br><span class="hljs-bullet">*</span> \&#123;&#125;<br><span class="hljs-bullet">*</span> \[]<br><span class="hljs-bullet">*</span> \()<br><span class="hljs-bullet">*</span> \#<br><span class="hljs-bullet">*</span> \+<br><span class="hljs-bullet">*</span> \-<br><span class="hljs-bullet">*</span> \.<br><span class="hljs-bullet">*</span> \!<br><span class="hljs-bullet">*</span> \|<br></code></pre></td></tr></table></figure>
 <ul>
 <li>\</li>
 <li>`</li>
@@ -670,6 +669,12 @@ A[方形] --&gt;B(圆角)
                 <div class="post-prevnext my-3">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2025/03/11/fluid%E7%9A%84%E5%85%B6%E4%BB%96%E7%94%A8%E6%B3%95/" title="Fluid的其他小语法">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Fluid的其他小语法</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
