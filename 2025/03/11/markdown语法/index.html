@@ -306,29 +306,25 @@
 
 <h1 id="代码语法"><a href="#代码语法" class="headerlink" title="代码语法"></a>代码语法</h1><p>要将单词或短语表示为代码，请将其包裹在反引号<code>`</code>中。</p>
 <p>例:</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros">`<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;HelloWorld!&quot;</span>)`<br></code></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-code">`print(&quot;HelloWorld!&quot;)`</span><br></code></pre></td></tr></table></figure>
 <p>效果：<br><code>print(&quot;HelloWorld!&quot;)</code></p>
 <h3 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h3><p>代码块可以通过对文本缩进得到，也可在文本上下分别输入<code>```</code>实现</p>
 <p>例：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>  cout &lt;&lt; <span class="hljs-string">&quot;HelloWorld!&quot;</span> &lt;&lt; endl;<br>  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-code">```cpp</span><br><span class="hljs-code">    #include &lt;iostream&gt;</span><br><span class="hljs-code">    using namespace std;</span><br><span class="hljs-code">    int main()&#123;</span><br><span class="hljs-code">      cout &lt;&lt; &quot;HelloWorld!&quot; &lt;&lt; endl;</span><br><span class="hljs-code">      return 0;</span><br><span class="hljs-code">    &#125;</span><br><span class="hljs-code">```</span><br></code></pre></td></tr></table></figure>
 <p>效果：</p>
-<pre><code class="hljs">#include &lt;iostream&gt;
-using namespace std;
-int main()&#123;
-  cout &lt;&lt; &quot;HelloWorld!&quot; &lt;&lt; endl;
-  return 0;
-&#125;
-</code></pre>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>  cout &lt;&lt; <span class="hljs-string">&quot;HelloWorld!&quot;</span> &lt;&lt; endl;<br>  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
 <h3 id="转义反引号"><a href="#转义反引号" class="headerlink" title="转义反引号"></a>转义反引号</h3><p>如果你要表示为代码的单词或短语中包含一个或多个反引号，则可以通过将单词或短语包裹在双反引号<code>``</code>中。</p>
 <p>例：</p>
-<figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs autohotkey">`` 使用` ``<br></code></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-code">`` 使用`</span> ``<br></code></pre></td></tr></table></figure>
+
 <p>效果：<br><code>使用`</code></p>
 <h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><p>表格用“|”和“-”来划定行列</p>
 <p>“:—-“表示靠左</p>
 <p>“—-:”表示靠右</p>
 <p>“:—:”表示居中</p>
 <p>例:</p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs elixir">标题<span class="hljs-number">1</span>|标题<span class="hljs-number">2</span>|标题<span class="hljs-number">3</span><br><span class="hljs-symbol">:-------</span><span class="hljs-symbol">:|</span><span class="hljs-symbol">:--------|--------</span>:<br><span class="hljs-number">444444444</span>|<span class="hljs-number">555555555</span>|<span class="hljs-number">666666666</span><br><span class="hljs-number">777777777</span>|<span class="hljs-number">888888888</span>|<span class="hljs-number">999999999</span><br><span class="hljs-number">1</span>|<span class="hljs-number">2</span>|<span class="hljs-number">3</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs markdown">标题1|标题2|标题3<br>:-------:|:--------|--------:<br>444444444|555555555|666666666<br>777777777|888888888|999999999<br>1|2|3<br></code></pre></td></tr></table></figure>
 <p>效果：</p>
 <table>
 <thead>
@@ -357,7 +353,7 @@ int main()&#123;
 <h1 id="段落语法"><a href="#段落语法" class="headerlink" title="段落语法"></a>段落语法</h1><p>要创建段落，请用一个或多个空行将文本进行分割</p>
 <p>上下相连的多行将会被识别成一行并被用一个空格相连</p>
 <p>比如：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs">这是一句<br>毫无意义<br>的话<br><br>这是另外一句毫无意义的话<br></code></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs markdown">这是一句<br>毫无意义<br>的话<br><br>这是另外一句毫无意义的话<br></code></pre></td></tr></table></figure>
 <p>将会变成：</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs">这是一句 毫无意义 的话<br>这是另外一句毫无意义的话<br></code></pre></td></tr></table></figure>
 
