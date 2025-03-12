@@ -27,7 +27,7 @@
 <meta property="og:description" content="导波理论是基于麦克斯韦方程组，在给定的边界条件下研究微波传输线中的电磁场分布规律及其传播特性的完备理论。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-03-12T10:47:00.000Z">
-<meta property="article:modified_time" content="2025-03-12T20:30:56.626Z">
+<meta property="article:modified_time" content="2025-03-12T21:21:04.596Z">
 <meta property="article:author" content="404 Not Found">
 <meta property="article:tag" content="微波技术">
 <meta name="twitter:card" content="summary_large_image">
@@ -228,7 +228,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          816 字
+          1.2k 字
         
       </span>
     
@@ -239,7 +239,7 @@
         
         
         
-          7 分钟
+          10 分钟
         
       </span>
     
@@ -364,7 +364,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    本文最后更新于 2025-03-13T04:30:56+08:00
+                    本文最后更新于 2025-03-13T05:21:04+08:00
                   
                   
 
@@ -401,7 +401,7 @@ $$
 &amp;\oint_{S}\vec{D}\cdot{} d\vec{S} = \int_{V}\rho{} dV \tag{1.8} 
 \end{align}
 $$
-</p><h2 id="波动方程"><a href="#波动方程" class="headerlink" title="波动方程"></a>波动方程</h2><p>在各向同性介质<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="[各向同性](https://zh.wikipedia.org/wiki/%E5%90%84%E5%90%91%E5%90%8C%E6%80%A7)是指物体的物理、化学性质不随方向的变化而变化。">[1]</span></a></sup>中，存在如下关系</p>
+</p><h2 id="波动方程"><a href="#波动方程" class="headerlink" title="波动方程"></a>波动方程</h2><p>在各向同性介质<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="[各向同性](https://zh.wikipedia.org/wiki/%E5%90%84%E5%90%91%E5%90%8C%E6%80%A7 '各向同性')是指物体的物理、化学性质不随方向的变化而变化。">[1]</span></a></sup>中，存在如下关系</p>
 <p>
 $$
 \begin{align}
@@ -419,16 +419,47 @@ $$
 \nabla{}(\nabla{}\cdot{}\vec{H})-\nabla{}^2\vec{H}&amp;=\varepsilon{}\frac{\partial{}(\nabla{}\times{}\vec{E})}{\partial{}t} \\
 \nabla{}(\frac{1}{\mu{}}\nabla{}\cdot{}\vec{B})-\nabla{}^2\vec{H}&amp;=-\varepsilon{}\frac{\partial{}^2\vec{B}}{\partial{}t^2} \\
 -\nabla{}^2\vec{H}+\mu{}\varepsilon{}\frac{\partial{}^2\vec{H}}{\partial{}t^2}&amp;=-\nabla{}(\frac{1}{\mu{}}\nabla{}\cdot{}\vec{B}) \\
-\nabla{}^2\vec{H}-\mu{}\varepsilon{}\frac{\partial{}^2\vec{H}}{\partial{}t^2}&amp;=0 
+\nabla{}^2\vec{H}-\mu{}\varepsilon{}\frac{\partial{}^2\vec{H}}{\partial{}t^2}&amp;=0 \tag{3.1}
 \end{align}
 $$
 </p><p>同理，对<a href="#(1.2)">$(1.2)$</a>两侧取旋度，也可得到另一个方程</p>
 <p>
 $$
-\nabla{}^2\vec{E}-\mu{}\varepsilon{}\frac{\partial{}^2\vec{E}}{\partial{}t^2}=0
+\nabla{}^2\vec{E}-\mu{}\varepsilon{}\frac{\partial{}^2\vec{E}}{\partial{}t^2}=0 \tag{3.2}
 $$
-</p><p>这便是无源区$\vec{E}$和$\vec{H}$的波动方程。</p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%90%84%E5%90%91%E5%90%8C%E6%80%A7">各向同性</a>是指物体的物理、化学性质不随方向的变化而变化。
+</p><p>这便是<code>无源区</code>的$\vec{E}$和$\vec{H}$的波动方程。</p>
+<h2 id="时谐场的瞬时式与复向量式"><a href="#时谐场的瞬时式与复向量式" class="headerlink" title="时谐场的瞬时式与复向量式"></a>时谐场的瞬时式与复向量式</h2><div class="note note-success">
+            <p>时谐场：指随时间按正弦或余弦函数变化的场</p>
+          </div>
+
+<p>对于时谐场，我们可以使用欧拉公式将其时变的规律统一记为$e^{j\omega{}t}$。</p>
+<p>例如对于一个沿$+z$方向传播、$\vec{a}_x$方向极化、随时间按余弦规律变化、初始相位为$\varphi_E$的非均匀平面波为例，其直角坐标系下电场强度的瞬时表达式为</p>
+<p>
+$$\vec{E}(x,y,z;t)=\vec{a}_xE(x,y)cos(\omega{}t-kz+\varphi{}_E)=Re[\dot{E}(x,y,z)e^{j\omega{}t}]$$
+</p><p>其中$\dot{E}(x,y,z)$是$\vec{a}_xE(x,y)e^{j(-kz+\varphi{}_E)}$，为$\vec{E}(x,y,z;t)$所对应的复向量形式。</p>
+<p>对于时谐场，对时间的导数可以采用复数形式表示</p>
+<p>
+$$
+\frac{\partial{}\vec{F}(\vec{r};t)}{\partial{}t}=\frac{\partial{}Re[\dot{F}(\vec{r})e^{j\omega{}t}]}{\partial{}t}=Re[j\omega{}\dot{F}(\vec{r})e^{j\omega{}t}]
+$$
+</p><p>因此麦克斯韦方程组和波动方程也可写为对应的复数形式</p>
+<p>
+$$
+\begin{align}
+&amp;\nabla{}\times{}\dot{H}=\dot{J}+j\omega{}\dot{D} \tag{4.1} \\
+&amp;\nabla{}\times{}\dot{E}=-j\omega{}\dot{B} \tag{4.2}\\
+&amp;\nabla{}\cdot{}\dot{B}=0 \tag{4.3}\\
+&amp;\nabla{}\cdot{}\dot{D}=\rho{} \tag{4.4}
+\end{align}
+$$
+</p><p>
+$$
+\begin{align}
+&amp;\nabla{}^2\dot{H}+\omega{}^2\mu{}\varepsilon{}\dot{H} = 0 \tag{5.1} \\
+&amp;\nabla{}^2\dot{E}+\omega{}^2\mu{}\varepsilon{}\dot{E} = 0 \tag{5.2}\\
+\end{align}
+$$
+</p><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%90%84%E5%90%91%E5%90%8C%E6%80%A7" title="各向同性">各向同性</a>是指物体的物理、化学性质不随方向的变化而变化。
 <a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
                 
               </div>
