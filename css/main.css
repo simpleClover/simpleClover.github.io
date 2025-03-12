@@ -1490,6 +1490,7 @@ figure.highlight td.code > pre {
   tab-size: 4;
   background-color: var(--inlinecode-bg-color);
   transition: background-color 0.2s ease-in-out;
+  font-family: var(--font-family-sans-serif);
 }
 .markdown-body table tr {
   background-color: var(--board-bg-color);
