@@ -27,7 +27,7 @@
 <meta property="og:description" content="导波理论是基于麦克斯韦方程组，在给定的边界条件下研究微波传输线中的电磁场分布规律及其传播特性的完备理论。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-03-12T10:47:00.000Z">
-<meta property="article:modified_time" content="2025-03-15T09:02:19.183Z">
+<meta property="article:modified_time" content="2025-03-15T17:59:06.441Z">
 <meta property="article:author" content="404 Not Found">
 <meta property="article:tag" content="微波技术">
 <meta name="twitter:card" content="summary_large_image">
@@ -187,8 +187,9 @@
         
         
           <li class="nav-item" id="search-btn">
-            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+            <a id="nav-link" class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
               <i class="iconfont icon-search"></i>
+              <code>Alt+K</code>
             </a>
           </li>
           
@@ -242,7 +243,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          3.2k 字
+          3.9k 字
         
       </span>
     
@@ -253,7 +254,7 @@
         
         
         
-          27 分钟
+          33 分钟
         
       </span>
     
@@ -378,7 +379,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    本文最后更新于 2025-03-15T17:02:19+08:00
+                    本文最后更新于 2025-03-16T01:59:06+08:00
                   
                   
 
@@ -623,14 +624,70 @@ $$
 \end{array}
 $$
 </p><p>可见我们只要使用电场和磁场的纵向分量便可以确定电场和磁场的横向分量</p>
-<h2 id="一些常见的参数"><a href="#一些常见的参数" class="headerlink" title="一些常见的参数"></a>一些常见的参数</h2><p>在波动方程$k_c^2&#x3D;k^2+\gamma{}^2$中，$k_c$为横向二维波数，与空间三维波数一样，我们令$\displaystyle{} \lambda_c&#x3D;\frac{2\pi{}}{k_c}$并将其称为横向波长，$\gamma{}$为传播常数。</p>
+<h2 id="常见参数"><a href="#常见参数" class="headerlink" title="常见参数"></a>常见参数</h2><p>在波动方程$k_c^2&#x3D;k^2+\gamma{}^2$中，$k_c$为横向二维波数，与空间三维波数一样，我们令$\displaystyle{} \lambda_c&#x3D;\frac{2\pi{}}{k_c}$并将其称为横向波长，$\gamma{}$为传播常数。</p>
 <p>
-$$\displaystyle{} \gamma{} = \sqrt{k_c^2-k_c^2} = \frac{2\pi{}}{\lambda{}}\sqrt{\left(\frac{\lambda{}}{\lambda{}_c}\right)^2-1} = \alpha{}+j\beta$$
+$$\displaystyle{} \gamma{} = \sqrt{k_c^2-k^2} = \frac{2\pi{}}{\lambda{}}\sqrt{\left(\frac{\lambda{}}{\lambda{}_c}\right)^2-1} = \alpha{}+j\beta$$
 </p><p>其中$\alpha{}$被称为衰减常数$(Np&#x2F;m)$，$\beta{}$为相移常数$(rad&#x2F;m)$。衰减常数表示传播单位距离后场量幅度变为原来的$e^{-\alpha{}}$，相移常数表示传播单位距离后相位滞后$\beta{}$弧度。</p>
 <p>当$\lambda{} &lt; \lambda{}_c$时，$\gamma{}&#x3D;j\beta{}$为纯虚数，此时电磁波可沿波导纵向传输波，波导工作在传输状态。<br>当$\lambda{} &gt; \lambda{}_c$时，$\gamma{}&#x3D;\alpha{}$为纯实数，此时电磁波沿波导纵向幅度衰减，波导工作在截止状态。</p>
-<p>因此$\lambda_c$也被称为截止波长，对应的$k_c$被称为截止波数。</p>
-<h2 id="导波的分类"><a href="#导波的分类" class="headerlink" title="导波的分类"></a>导波的分类</h2><p>导波是根据磁场和电场是否存在纵向分量来分类的</p>
+<p>$\lambda_c$也被称为截止波长，对应的$k_c$被称为截止波数</p>
+<p>波阻抗为相互正交的横向电场与横向磁场之比</p>
+<p>
+$$
+\begin{align}
+\eta{}_{TEM} &amp;= \frac{E_x}{H_y} = \sqrt{\frac{\mu{}}{\varepsilon{}}} \\
+\eta{}_{TE} &amp;= \frac{E_x}{H_y} = \dfrac{\dfrac{-1}{k_{\mathrm{c}}^{2}}\left(\mathrm{j} \omega{}  \mu{} \frac{\partial{} H_{z}}{\partial{} y}\right)}{\dfrac{-1}{k_{\mathrm{c}}^{2}}\left(\gamma{} \frac{\partial{} H_{z}}{\partial{} y}\right)}=\frac{\omega{}\mu{}}{\beta{}} = \frac{\dfrac{k}{\sqrt{\mu{}\varepsilon{}}}\mu{}}{\sqrt{k^2-k_c^2}}=\frac{\eta{}_{TEM}}{\sqrt{1-\left(\dfrac{\lambda{}}{\lambda{}_c}\right)^2}}\\
+\eta{}_{TM} &amp;= \frac{E_x}{H_y} = \dfrac{\frac{-1}{k_{\mathrm{c}}^{2}}\left(\gamma{} \frac{\partial{} E_{z}}{\partial{} x}\right)}{\frac{-1}{k_{\mathrm{c}}^{2}}\left(\mathrm{j} \omega{} \varepsilon{} \frac{\partial{} E_{z}}{\partial{} x}\right)}=\frac{\beta{}}{\omega{}\varepsilon{}}=\frac{\sqrt{k^2-k_c^2}}{\dfrac{k}{\sqrt{\mu{}\varepsilon{}}}\varepsilon{}}=\eta{}_{TEM}\sqrt{1-\left(\dfrac{\lambda{}}{\lambda{}_c}\right)^2}
+\end{align}
+$$
+</p><h2 id="相速和群速"><a href="#相速和群速" class="headerlink" title="相速和群速"></a>相速和群速</h2><p>假设一时谐电场的瞬时表达式为$\vec{E}(z,t)&#x3D;Re[\vec{E_m}e^{-j\beta{}z}e^{j\omega{}t]}&#x3D;\vec{E_m}\textrm{cos}(\omega{}t-\beta{}z)$，取其恒定相位点，即</p>
+<p>
+$$\omega{}t-\beta{}z=C$$
+</p><p>则相速为</p>
+<p>$$<br>v_p&#x3D;\frac{dz}{dt}&#x3D;\frac{\omega{}}{\beta{}}<br>$$ </p>
+<p>群速是波包络等相位面移动的速度，假设两列振幅相同的波分别为</p>
+<p>
+$$
+\begin{array}{l}
+\vec{E_1}(z,t)=\vec{E_{m} }\textrm{cos}((\omega{}+\Delta{}\omega{})t-(\beta{}+\Delta{}\beta{})z) \\
+\vec{E_2}(z,t)=\vec{E_{m} }\textrm{cos}((\omega{}-\Delta{}\omega{})t-(\beta{}-\Delta{}\beta{})z)
+\end{array}
+(\Delta{}\omega{} \ll{} \omega{} )
+$$
+</p><p>根据和差化积公式有</p>
+<p>
+$$
+\vec{E}=\vec{E_1}+\vec{E_2}=2\vec{E_m}\textrm{cos}(\Delta{}\omega{}t-\Delta{}\beta{}z)\textrm{cos}(\omega{}t-\beta{}z)
+$$
+</p><p>此时合成波的包络为</p>
+<p>
+$$
+\vec{E_0}=2\vec{E_m}\textrm{cos}(\Delta{}\omega{}t-\Delta{}\beta{}z)
+$$
+</p><p>在包络上取一恒定相位点，则有包络波速即群速为</p>
+<p>
+$$
+v_g=\frac{dz}{dt}=\frac{\Delta{}\omega{}}{\Delta{}\beta{}}=\frac{d\omega{}}{d\beta{}}(\Delta{}\omega{} \ll{} \omega{})
+$$
+</p><p>由于$\gamma{}^2&#x3D;-\beta{}^2&#x3D;k_c^2-k^2$，可以解出</p>
+<p>
+$$\displaystyle{} \beta{}=\sqrt{k^2-k_c^2}=\sqrt{\left(\frac{2\pi{}}{\lambda{}}\right)^2-\left(\frac{2\pi{}}{\lambda{}_c}\right)^2}=\frac{2\pi{}}{\lambda{}}\sqrt{1-\left(\frac{\lambda{}}{\lambda{}_c}\right)^2}$$
+</p><p>则有</p>
+<p>
+$$
+\displaystyle{} v_p=\frac{dz}{dt}=\frac{\omega{}}{\beta{}}=\frac{2\pi{}f}{\dfrac{2\pi{}}{\lambda{}}\sqrt{1-\left(\dfrac{\lambda{}}{\lambda{}_c}\right)^2}}=\frac{v}{\sqrt{1-\left(\dfrac{\lambda{}}{\lambda{}_c}\right)^2}}
+$$
+</p><p>
+$$
+\displaystyle{} v_g=\frac{d\omega{}}{d\beta{}}= \frac{\dfrac{d\omega{}}{dk}}{\dfrac{d\beta{}}{dk}} = \frac{\dfrac{d(vk)}{dk}}{\dfrac{d(\sqrt{k^2-k_c^2})}{dk}}=\frac{v\sqrt{k^2-k_c^2}}{k}=v\sqrt{1-\left(\frac{\lambda{}}{\lambda{}_c}\right)^2}
+$$
+</p><p>相波长为导行波系统中相位相差为$2\pi{}$的两相位面之间的距离</p>
+<p>
+$$
+\lambda{}_p = \frac{2\pi{}}{\beta{}} = \frac{2\pi{}v_p}{\omega{}} = \frac{v_p}{f} =\frac{\lambda{}}{\sqrt{1-\left(\dfrac{\lambda{}}{\lambda{}_c}\right)^2}}
+$$
+</p><h2 id="导波的分类"><a href="#导波的分类" class="headerlink" title="导波的分类"></a>导波的分类</h2><p>导波是根据磁场和电场是否存在纵向分量来分类的</p>
 <p>如果$E_z&#x3D;0,H_z\neq{}0$，那么这种波为横电波，记作$\textrm{TE}$波(Transverse Electric Field)<br>如果$E_z\neq{}0,H_z&#x3D;0$，那么这种波为横磁波，记作$\textrm{TM}$波(Transverse Magnetic Field)  d<br>如果$E_z&#x3D;0,H_z&#x3D;0$，那么电场和磁场完全在横截面内，这种波为横电磁波，记作$\textrm{TEM}$波(Transverse Electric and Magnetic Field)，由于不存在纵向场分量，这种波不能用纵向场求解横向场。</p>
+<p>在空心波导内无法传播$TEM$波，由于$TEM$波的电场和磁场均在波导横截面内，则磁场在波导横截面必定会形成闭合曲线，根据<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%AE%89%E5%9F%B9%E7%8E%AF%E8%B7%AF%E5%AE%9A%E5%BE%8B">安培环路定律</a>，波导内必定存在轴向的传导电流或位移电流，由于空心波导不存在传导电流，则必定存在位移电流，这与$TEM$波的定义相矛盾。</p>
 <hr>
 <section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%90%84%E5%90%91%E5%90%8C%E6%80%A7" title="各向同性">各向同性</a>是指物体的物理、化学性质不随方向的变化而变化。
 <a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
@@ -1104,5 +1161,5 @@ $$\displaystyle{} \gamma{} = \sqrt{k_c^2-k_c^2} = \frac{2\pi{}}{\lambda{}}\sqrt{
   <noscript>
     <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
   </noscript>
-</body>
+<!-- hexo injector body_end start --><script src="/js/main.js"></script><!-- hexo injector body_end end --></body>
 </html>

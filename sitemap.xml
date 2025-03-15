@@ -56,7 +56,7 @@
 
   
   <url>
-    <loc>https://simpleclover.github.io/tags/markdown/</loc>
+    <loc>https://simpleclover.github.io/tags/blog/</loc>
     <lastmod>2025-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -70,7 +70,7 @@
   </url>
   
   <url>
-    <loc>https://simpleclover.github.io/tags/blog/</loc>
+    <loc>https://simpleclover.github.io/tags/markdown/</loc>
     <lastmod>2025-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

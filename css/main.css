@@ -314,6 +314,13 @@ sup > a::before,
 .navbar .nav-item .nav-link i:only-child {
   margin: 0 0.2rem;
 }
+.navbar .nav-item .nav-link code {
+  padding: 4px;
+  border-radius: 4px;
+  background-color: var(--inlinecode-bg-color);
+  transition: background-color 0.2s ease-in-out;
+  font-family: var(--font-family-sans-serif);
+}
 .navbar .navbar-toggler {
   border-width: 0;
   outline: 0;
