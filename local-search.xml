@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>矩形波导中的场分布</title>
+    <link href="/2025/03/26/%E5%BE%AE%E6%B3%A2%E6%8A%80%E6%9C%AF/%E7%9F%A9%E5%BD%A2%E6%B3%A2%E5%AF%BC%E4%B8%AD%E7%9A%84%E5%9C%BA%E5%88%86%E5%B8%83/"/>
+    <url>/2025/03/26/%E5%BE%AE%E6%B3%A2%E6%8A%80%E6%9C%AF/%E7%9F%A9%E5%BD%A2%E6%B3%A2%E5%AF%BC%E4%B8%AD%E7%9A%84%E5%9C%BA%E5%88%86%E5%B8%83/</url>
+    
+    <content type="html"><![CDATA[<h1 id="矩形波导中的场分布"><a href="#矩形波导中的场分布" class="headerlink" title="矩形波导中的场分布"></a>矩形波导中的场分布</h1><p>由导行波分析可知矩形波导中不可能存在TEM波，只可能存在TM波和TE波。<br>对于TM波，波导内的电磁场由$E_z$确定。对于TE波，波导内的电磁场由$H_z$确定。下面我们将对于一个宽为a，高为b的矩形波导进行分析</p><h2 id="矩形波导中的TM波"><a href="#矩形波导中的TM波" class="headerlink" title="矩形波导中的TM波"></a>矩形波导中的TM波</h2><p>根据电磁波纵向分量满足的波动方程和边界条件，我们便可以算出波导内波的分布</p><p>$$\left(\dfrac{\partial^{2}}{\partial x^2}+\dfrac{\partial^{2}}{\partial y^2}+\dfrac{\partial^{2}}{\partial z^2}\right)E_z+k^2E_z=0$$</p><p>将$E_z(x,y,z)&#x3D;E_z(x,y)e^{-\gamma z}$代入上式便可得到</p><p>$$\left(\dfrac{\partial^{2}}{\partial x^2}+\dfrac{\partial^{2}}{\partial y^2}+k_c^2\right)E_z(x,y)=0$$</p><p>此时分离变量，令$E_z(x,y)&#x3D;f(x)g(y)$，$k_c^2&#x3D;k_x^2+k_y^2$，则有</p><p>$$\begin{array}{c}f''(x)g(y)+f(x)g''(y)+(k_x^2+k_y^2)f(x)g(y)=0 \\\dfrac{f''(x)}{f(x)}+ k_x^2+\dfrac{g''(y)}{g(y)} +k_y^2 = 0\end{array}$$</p><p>对于电场，其边界条件为</p><p>$$\begin{array}{cc}E_z\big|_{x=0}=0 &amp; E_z\big|_{x=a}=0 \\E_z\big|_{y=0}=0 &amp; E_z\big|_{y=b}=0 \end{array}$$</p><p>则问题可分为两个微分方程的求解</p><p>$$\begin{array}{l}\begin{cases}f''(x)+k_x^2f(x)=0 \\f(0)=0, f(a)=0\end{cases}\\\\\begin{cases}g''(y)+k_y^2g(y)=0 \\g(0)=0, g(b)=0\end{cases}\end{array}$$</p><p>求其通解</p><p>$$\begin{array}{c}f(x)=A\textrm{sin}(k_xx)+B\textrm{cos}(k_xx) \\g(y)=C\textrm{sin}(k_yy)+D\textrm{cos}(k_yy) \end{array}$$</p><p>由$f(0)&#x3D;0,g(0)&#x3D;0$可知$B&#x3D;0,D&#x3D;0$。</p><p>再由$f(a)&#x3D;0,g(b)&#x3D;0$可得</p><p>$$\begin{array}{l}f(x)=A\textrm{sin}(k_xa)=0\\g(y)=C\textrm{sin}(k_yb)=0\end{array}$$</p><p>即</p><p>$$\begin{array}{lc}\displaystyle k_x=\frac{m\pi}{a} &amp; m=1,2,3\dots \\\displaystyle k_y=\frac{n\pi}{b} &amp; n=1,2,3\dots\end{array}$$</p><p>将其带入分离变量的方程，则有</p><p>$$\begin{array}{c}E_z(x,y)=f(x)g(y)=E_m\textrm{sin}(\dfrac{m\pi}{a}x)\textrm{sin}(\dfrac{n\pi}{b}y) \quad m,n=1,2,3\dots \\k_{cmn}^2 = \left(\dfrac{m\pi}{a}\right)^2+\left(\dfrac{n\pi}{b}\right)^2\end{array}$$</p><p>可见截止波数只与波导的尺寸有关，且一组$mn$对应一组模式，记作$\textrm{TM}_{mn}$</p><h2 id="矩形波导中的TE波"><a href="#矩形波导中的TE波" class="headerlink" title="矩形波导中的TE波"></a>矩形波导中的TE波</h2><p>与TM波分析方法类似，对于$H_z(x,y)&#x3D;f(x)g(y)$，有</p><p>$$\begin{array}{c}f(a)=A\textrm{sin}(k_xx)+B\textrm{cos}(k_xx) \\g(bb)=C\textrm{sin}(k_yy)+D\textrm{cos}(k_yy) \end{array}$$</p><p>但与之不同的是边界条件，对于磁场其边界条件为</p><p>$$\begin{array}{cc}\dfrac{\partial H_z}{\partial x}\big|_{x=0}=0 &amp; \dfrac{\partial H_z}{\partial x}\big|_{x=a}=0 \\\dfrac{\partial H_z}{\partial y}\big|_{y=0}=0 &amp; \dfrac{\partial H_z}{\partial y}\big|_{y=b}=0\end{array}$$</p><p>则有 $A&#x3D;0,C&#x3D;0$，且</p><p>$$\begin{array}{c}f'(a) = -Bk_x\textrm{sin}(k_xa) = 0\\g'(b) = -Dk_y\textrm{sin}(k_yb) = 0\end{array}$$</p><p>则有</p><p>$$\begin{array}{lc}\displaystyle k_x=\frac{m\pi}{a} &amp; m=0,1,2\dots \\\displaystyle k_y=\frac{n\pi}{b} &amp; n=0,1,2\dots\end{array}$$</p><p>最终得到</p><p>$$\begin{array}{c}H_z(x,y)=f(x)g(y)=H_m\textrm{cos}(\dfrac{m\pi}{a}x)\textrm{cos}(\dfrac{n\pi}{b}y) \quad m,n=0,1,2\dots \\k_{cmn}^2 = \left(\dfrac{m\pi}{a}\right)^2+\left(\dfrac{n\pi}{b}\right)^2\end{array}$$</p><div class="note note-success">            <p>注意到对于TM波m和n不可为0，但在TE波中m和n不能同时取0</p>          </div>]]></content>
+    
+    
+    <categories>
+      
+      <category>笔记</category>
+      
+      <category>微波技术</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>微波技术</tag>
+      
+      <tag>矩形波导</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>史密斯圆图</title>
     <link href="/2025/03/26/%E5%BE%AE%E6%B3%A2%E6%8A%80%E6%9C%AF/%E5%8F%B2%E5%AF%86%E6%96%AF%E5%9C%86%E5%9B%BE/"/>
     <url>/2025/03/26/%E5%BE%AE%E6%B3%A2%E6%8A%80%E6%9C%AF/%E5%8F%B2%E5%AF%86%E6%96%AF%E5%9C%86%E5%9B%BE/</url>
@@ -62,11 +91,11 @@
   
   
   <entry>
-    <title>第一次写博客的感想</title>
-    <link href="/2025/03/10/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%86%99%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%84%9F%E6%83%B3/"/>
-    <url>/2025/03/10/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%86%99%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%84%9F%E6%83%B3/</url>
+    <title>Hello</title>
+    <link href="/2025/03/10/Hello/"/>
+    <url>/2025/03/10/Hello/</url>
     
-    <content type="html"><![CDATA[<h1 id="啥都没有！"><a href="#啥都没有！" class="headerlink" title="啥都没有！"></a>啥都没有！</h1><center>空空的~~~</center><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><center>空空的~~~</center><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><center><font size="1px">.. .-.. --- ...- . -.-- --- ..-</font></center><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><center>感谢看完捏~</center>]]></content>
+    <content type="html"><![CDATA[<h1 id="啥都没有！"><a href="#啥都没有！" class="headerlink" title="啥都没有！"></a>啥都没有！</h1><center>空空的~~~</center><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><center>空空的~~~</center><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><center><font size="1px">-.-- --- ..- ..-. --- ..- -. -.. -- .</font></center><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><center>感谢看完捏~</center>]]></content>
     
     
     <categories>
