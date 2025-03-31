@@ -1,0 +1,1054 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/favicon.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="404 Not Found">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="矩形波导与圆波导都是常见的波导，本文主要讲解矩形波导的参数计算">
+<meta property="og:type" content="article">
+<meta property="og:title" content="矩形波导中的场分布">
+<meta property="og:url" content="https://simpleclover.github.io/2025/03/26/%E5%BE%AE%E6%B3%A2%E6%8A%80%E6%9C%AF/%E7%9F%A9%E5%BD%A2%E6%B3%A2%E5%AF%BC%E4%B8%AD%E7%9A%84%E5%9C%BA%E5%88%86%E5%B8%83/index.html">
+<meta property="og:site_name" content="404 Not Foundの奇妙小屋">
+<meta property="og:description" content="矩形波导与圆波导都是常见的波导，本文主要讲解矩形波导的参数计算">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-03-26T14:47:22.000Z">
+<meta property="article:modified_time" content="2025-03-30T16:00:58.364Z">
+<meta property="article:author" content="404 Not Found">
+<meta property="article:tag" content="微波技术">
+<meta property="article:tag" content="矩形波导">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>矩形波导中的场分布 - 404 Not Foundの奇妙小屋</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"simpleclover.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"|","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"※"},"progressbar":{"enable":true,"height_px":5,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+  <meta name="msvalidate.01" content="648FC44D3922C2EDCD9907B66AFAC487" />
+  <meta name="google-site-verification" content="4-ZbcB9cBGJtRXzTR72udQbJclrsUqlSvrcOvmSHvpY" />
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>404NotFound&#39;s Home</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a id="nav-link" class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+              <code>Alt+K</code>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/banner.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.2)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="矩形波导中的场分布"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        404 Not Found
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-03-26 22:47" pubdate>
+          2025年3月26日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          789 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          7 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar category-bar" style="margin-right: -1rem">
+    
+
+
+
+
+
+<div class="category-list">
+  
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="笔记"
+        id="heading-7051dc52c184c205e39aa54b4664ae9b" role="tab" data-toggle="collapse" href="#collapse-7051dc52c184c205e39aa54b4664ae9b"
+        aria-expanded="true"
+      >
+        笔记
+        <span class="list-group-count">(3)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-7051dc52c184c205e39aa54b4664ae9b"
+           role="tabpanel" aria-labelledby="heading-7051dc52c184c205e39aa54b4664ae9b">
+        
+        
+          
+          
+  <div class="category-post-list">
+    
+    
+  </div>
+
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="微波技术"
+        id="heading-169ffea6a87a1e5f152c14efb4bfb5e9" role="tab" data-toggle="collapse" href="#collapse-169ffea6a87a1e5f152c14efb4bfb5e9"
+        aria-expanded="true"
+      >
+        微波技术
+        <span class="list-group-count">(3)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-169ffea6a87a1e5f152c14efb4bfb5e9"
+           role="tabpanel" aria-labelledby="heading-169ffea6a87a1e5f152c14efb4bfb5e9">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2025/03/30/%E5%BE%AE%E6%B3%A2%E6%8A%80%E6%9C%AF/%E4%BC%A0%E8%BE%93%E7%BA%BF%E6%96%B9%E7%A8%8B/" title="传输线方程"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">传输线方程</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2025/03/12/%E5%BE%AE%E6%B3%A2%E6%8A%80%E6%9C%AF/%E5%AF%BC%E8%A1%8C%E6%B3%A2%E5%88%86%E6%9E%90%E6%96%B9%E6%B3%95/" title="导行波分析方法"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">导行波分析方法</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2025/03/26/%E5%BE%AE%E6%B3%A2%E6%8A%80%E6%9C%AF/%E7%9F%A9%E5%BD%A2%E6%B3%A2%E5%AF%BC%E4%B8%AD%E7%9A%84%E5%9C%BA%E5%88%86%E5%B8%83/" title="矩形波导中的场分布"
+           class="list-group-item list-group-item-action
+           active">
+          <span class="category-post">矩形波导中的场分布</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+        
+      </div>
+    </div>
+  
+</div>
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">矩形波导中的场分布</h1>
+            
+              <p id="updated-time" class="note note-info" style="display: none">
+                
+                  
+                    本文最后更新于 2025-03-31T00:00:58+08:00
+                  
+                  
+
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="矩形波导中的场分布"><a href="#矩形波导中的场分布" class="headerlink" title="矩形波导中的场分布"></a>矩形波导中的场分布</h1><p>由导行波分析可知矩形波导中不可能存在TEM波，只可能存在TM波和TE波。<br>对于TM波，波导内的电磁场由$E_z$确定。对于TE波，波导内的电磁场由$H_z$确定。下面我们将对于一个宽为a，高为b的矩形波导进行分析</p>
+<h2 id="矩形波导中的TM波"><a href="#矩形波导中的TM波" class="headerlink" title="矩形波导中的TM波"></a>矩形波导中的TM波</h2><p>根据电磁波纵向分量满足的波动方程和边界条件，我们便可以算出波导内波的分布</p>
+<p>
+$$
+\left(\dfrac{\partial^{2}}{\partial x^2}+\dfrac{\partial^{2}}{\partial y^2}+\dfrac{\partial^{2}}{\partial z^2}\right)E_z+k^2E_z=0
+$$
+</p><p>将$E_z(x,y,z)&#x3D;E_z(x,y)e^{-\gamma z}$代入上式便可得到</p>
+<p>
+$$
+\left(\dfrac{\partial^{2}}{\partial x^2}+\dfrac{\partial^{2}}{\partial y^2}+k_c^2\right)E_z(x,y)=0
+$$
+</p><p>此时分离变量，令$E_z(x,y)&#x3D;f(x)g(y)$，$k_c^2&#x3D;k_x^2+k_y^2$，则有</p>
+<p>
+$$
+\begin{array}{c}
+f''(x)g(y)+f(x)g''(y)+(k_x^2+k_y^2)f(x)g(y)=0 \\
+\dfrac{f''(x)}{f(x)}+ k_x^2+\dfrac{g''(y)}{g(y)} +k_y^2 = 0
+\end{array}
+$$
+</p><p>对于电场，其边界条件为</p>
+<p>
+$$
+\begin{array}{cc}
+E_z\big|_{x=0}=0 &amp; E_z\big|_{x=a}=0 \\
+E_z\big|_{y=0}=0 &amp; E_z\big|_{y=b}=0 
+\end{array}
+$$
+</p><p>则问题可分为两个微分方程的求解</p>
+<p>
+$$
+\begin{array}{l}
+\begin{cases}
+f''(x)+k_x^2f(x)=0 \\
+f(0)=0, f(a)=0
+\end{cases}
+\\
+\\
+\begin{cases}
+g''(y)+k_y^2g(y)=0 \\
+g(0)=0, g(b)=0
+\end{cases}
+\end{array}
+$$
+</p><p>求其通解</p>
+<p>
+$$
+\begin{array}{c}
+f(x)=A\textrm{sin}(k_xx)+B\textrm{cos}(k_xx) \\
+g(y)=C\textrm{sin}(k_yy)+D\textrm{cos}(k_yy) 
+\end{array}
+$$
+</p><p>由$f(0)&#x3D;0,g(0)&#x3D;0$可知$B&#x3D;0,D&#x3D;0$。</p>
+<p>再由$f(a)&#x3D;0,g(b)&#x3D;0$可得</p>
+<p>
+$$
+\begin{array}{l}
+f(x)=A\textrm{sin}(k_xa)=0\\
+g(y)=C\textrm{sin}(k_yb)=0
+\end{array}
+$$
+</p><p>即</p>
+<p>
+$$
+\begin{array}{lc}
+\displaystyle k_x=\frac{m\pi}{a} &amp; m=1,2,3\dots \\
+\displaystyle k_y=\frac{n\pi}{b} &amp; n=1,2,3\dots
+\end{array}
+$$
+</p><p>将其带入分离变量的方程，则有</p>
+<p>
+$$
+\begin{array}{c}
+E_z(x,y)=f(x)g(y)=E_m\textrm{sin}(\dfrac{m\pi}{a}x)\textrm{sin}(\dfrac{n\pi}{b}y) \quad m,n=1,2,3\dots \\
+k_{cmn}^2 = \left(\dfrac{m\pi}{a}\right)^2+\left(\dfrac{n\pi}{b}\right)^2
+\end{array}
+$$
+</p><p>可见截止波数只与波导的尺寸有关，且一组$mn$对应一组模式，记作$\textrm{TM}_{mn}$</p>
+<h2 id="矩形波导中的TE波"><a href="#矩形波导中的TE波" class="headerlink" title="矩形波导中的TE波"></a>矩形波导中的TE波</h2><p>与TM波分析方法类似，对于$H_z(x,y)&#x3D;f(x)g(y)$，有</p>
+<p>
+$$
+\begin{array}{c}
+f(a)=A\textrm{sin}(k_xx)+B\textrm{cos}(k_xx) \\
+g(b)=C\textrm{sin}(k_yy)+D\textrm{cos}(k_yy) 
+\end{array}
+$$
+</p><p>但与之不同的是边界条件，对于磁场，其边界条件为</p>
+<p>
+$$
+\begin{array}{cc}
+\dfrac{\partial H_z}{\partial x}\big|_{x=0}=0 &amp; \dfrac{\partial H_z}{\partial x}\big|_{x=a}=0 \\
+\dfrac{\partial H_z}{\partial y}\big|_{y=0}=0 &amp; \dfrac{\partial H_z}{\partial y}\big|_{y=b}=0
+\end{array}
+$$
+</p><p>则有 $A&#x3D;C&#x3D;0$，且</p>
+<p>
+$$
+\begin{array}{c}
+f'(a) = -Bk_x\textrm{sin}(k_xa) = 0\\
+g'(b) = -Dk_y\textrm{sin}(k_yb) = 0
+\end{array}
+$$
+</p><p>则有</p>
+<p>
+$$
+\begin{array}{lc}
+\displaystyle k_x=\frac{m\pi}{a} &amp; m=0,1,2\dots \\
+\displaystyle k_y=\frac{n\pi}{b} &amp; n=0,1,2\dots
+\end{array}
+$$
+</p><p>最终得到</p>
+<p>
+$$
+\begin{array}{c}
+H_z(x,y)=f(x)g(y)=H_m\textrm{cos}(\dfrac{m\pi}{a}x)\textrm{cos}(\dfrac{n\pi}{b}y) \quad m,n=0,1,2\dots \\
+k_{cmn}^2 = \left(\dfrac{m\pi}{a}\right)^2+\left(\dfrac{n\pi}{b}\right)^2
+\end{array}
+$$
+</p><div class="note note-success">
+            <p>注意到对于TM波m和n不可为0，但在TE波中m和n不能同时取0</p>
+          </div>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%AC%94%E8%AE%B0/" class="category-chain-item">笔记</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E7%AC%94%E8%AE%B0/%E5%BE%AE%E6%B3%A2%E6%8A%80%E6%9C%AF/" class="category-chain-item">微波技术</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E5%BE%AE%E6%B3%A2%E6%8A%80%E6%9C%AF/" class="print-no-link">#微波技术</a>
+      
+        <a href="/tags/%E7%9F%A9%E5%BD%A2%E6%B3%A2%E5%AF%BC/" class="print-no-link">#矩形波导</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>矩形波导中的场分布</div>
+      <div>https://simpleclover.github.io/2025/03/26/微波技术/矩形波导中的场分布/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>404 Not Found</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年3月26日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-cc-nc"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="SA - 相同方式共享">
+                    <i class="iconfont icon-cc-sa"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2025/03/30/%E5%BE%AE%E6%B3%A2%E6%8A%80%E6%9C%AF/%E4%BC%A0%E8%BE%93%E7%BA%BF%E6%96%B9%E7%A8%8B/" title="传输线方程">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">传输线方程</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/03/12/%E5%BE%AE%E6%B3%A2%E6%8A%80%E6%9C%AF/%E5%AF%BC%E8%A1%8C%E6%B3%A2%E5%88%86%E6%9E%90%E6%96%B9%E6%B3%95/" title="导行波分析方法">
+                        <span class="hidden-mobile">导行波分析方法</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+    <div id="giscus" class="giscus"></div>
+    <script type="text/javascript">
+      Fluid.utils.loadComments('#giscus', function() {
+        var options = {"repo":"simpleClover/simpleClover.github.io","repo-id":"R_kgDOOGFq2Q","category":"Announcements","category-id":"DIC_kwDOOGFq2c4ComHQ","theme-light":"light","theme-dark":"dark","mapping":"pathname","reactions-enabled":1,"emit-metadata":0,"input-position":"top","lang":"zh-CN"};
+        var attributes = {};
+        for (let option in options) {
+          if (!option.startsWith('theme-')) {
+            var key = option.startsWith('data-') ? option : 'data-' + option;
+            attributes[key] = options[option];
+          }
+        }
+        var light = 'light';
+        var dark = 'dark';
+        window.GiscusThemeLight = light;
+        window.GiscusThemeDark = dark;
+        attributes['data-theme'] = document.documentElement.getAttribute('data-user-color-scheme') === 'dark' ? dark : light;
+        for (let attribute in attributes) {
+          var value = attributes[attribute];
+          if (value === undefined || value === null || value === '') {
+            delete attributes[attribute];
+          }
+        }
+        var s = document.createElement('script');
+        s.setAttribute('src', 'https://giscus.app/client.js');
+        s.setAttribute('crossorigin', 'anonymous');
+        for (let attribute in attributes) {
+          s.setAttribute(attribute, attributes[attribute]);
+        }
+        var ss = document.getElementsByTagName('script');
+        var e = ss.length > 0 ? ss[ss.length - 1] : document.head || document.documentElement;
+        e.parentNode.insertBefore(s, e.nextSibling);
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+  <script>
+  Fluid.utils.createScript('https://lib.baomitu.com/mermaid/8.14.0/mermaid.min.js', function() {
+    mermaid.initialize({"theme":"default"});
+
+    Fluid.utils.listenDOMLoaded(function() {
+      Fluid.events.registerRefreshCallback(function() {
+        if ('mermaid' in window) {
+          mermaid.init();
+        }
+      });
+    });
+  });
+</script>
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  var relativeDate = function() {
+    var updatedTime = document.getElementById('updated-time');
+    if (updatedTime) {
+      var text = updatedTime.textContent;
+      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
+      var matchs = text.match(reg);
+      if (matchs) {
+        var relativeTime = moment(matchs[0]).fromNow();
+        updatedTime.textContent = text.replace(reg, relativeTime);
+      }
+      updatedTime.style.display = '';
+    }
+  };
+  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
+    if (!'zh-cn'.startsWith('en')) {
+      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-cn.min.js', function() {
+        relativeDate();
+      });
+    } else {
+      relativeDate();
+    }
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+<!-- hexo injector body_end start --><script src="/js/main.js"></script><!-- hexo injector body_end end --></body>
+</html>
