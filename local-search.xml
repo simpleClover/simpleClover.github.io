@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>传输线方程</title>
+    <link href="/2025/03/30/%E5%BE%AE%E6%B3%A2%E6%8A%80%E6%9C%AF/%E4%BC%A0%E8%BE%93%E7%BA%BF%E6%96%B9%E7%A8%8B/"/>
+    <url>/2025/03/30/%E5%BE%AE%E6%B3%A2%E6%8A%80%E6%9C%AF/%E4%BC%A0%E8%BE%93%E7%BA%BF%E6%96%B9%E7%A8%8B/</url>
+    
+    <content type="html"><![CDATA[<p>当电路频率不断升高，电路中波长不断减小，就可能出现在同一条导线中的不同位置电流和电压的相位和幅度出现不同的现象，此时就不能用电路的集总参数模型，而是需要使用电路的分布模型来分析电路</p><hr><h1 id="均匀传输线方程的推导"><a href="#均匀传输线方程的推导" class="headerlink" title="均匀传输线方程的推导"></a>均匀传输线方程的推导</h1><div class="note note-success">            <p>均匀传输线：即沿线的电气参数是均匀不变的</p>          </div><p>对于均匀传输线，每一小段电路可以用几种理想器件的等效电路表示，那么传输线可视为多段串联在一起</p><p><img src="/img/TLINE.png" alt="传输线"></p><p>对于每一段电路其参数如下所示，其中$X_0$表示对应参数的分布参数，即单位长度内的参数</p><p><img src="/img/TLINE_single.png" alt="传输线"></p><p>根据KCL和KVL公式可以得到</p><p>$$\begin{aligned}&amp; u(z+d z, t)=u(z, t)-i(z, t) R_0 d z-\frac{\partial i(z, t)}{\partial t} L_0 d z \\&amp; i(z+d z, t)=i(z, t)-u(z+d z, t) G_0 d z-\frac{\partial u(z+d z, t)}{\partial t} C_0 d z\end{aligned}$$</p><p>稍作变换后可得到</p><p>$$\begin{aligned}&amp; \frac{u(z+d z, t)-u(z, t)}{d z}=-i(z, t) R_0-\frac{\partial i(z, t)}{\partial t} L_0 \\&amp; \frac{i(z+d z, t)-i(z, t)}{d z}=-u(z+d z, t) G_0-\frac{\partial u(z+d z, t)}{\partial t} C_0\end{aligned}$$</p><p>考虑到极限下$dz\rightarrow 0$，且$u(z, t)$和$i(z, t)$为时谐信号，则方程可进一步表示为</p><p>$$\begin{aligned}&amp; \frac{\partial U(z)}{\partial z}=-\left(R_0+j \omega L_0\right) I(z) \\&amp; \frac{\partial I(z)}{\partial z}=-\left(G_0+j \omega C_0\right) U(z)\end{aligned}$$</p><p>将其交叉带入后可得到</p><p>$$\begin{aligned}&amp; \frac{\partial ^2 U(z)}{\partial z^2}-\gamma^2 U(z) = 0 \\&amp; \frac{\partial ^2 I(z)}{\partial z^2}-\gamma^2 I(z) = 0\end{aligned}$$</p><p>其中 $\gamma &#x3D; \sqrt{ZY}&#x3D;\sqrt{\left(R_0+j \omega L_0\right)\left(G_0+j \omega C_0\right)}$</p><p>可见其形式与亥姆霍兹方程组形式一样，其解为</p><p>$$\begin{aligned}&amp; U(z)=A_1e^{-\gamma z}+A_2e^{\gamma z} \\&amp; I(z)=\frac{1}{Z_0}\left(A_1e^{-\gamma z}-A_2e^{\gamma z}\right) \end{aligned}$$</p><p>其中$\displaystyle Z_0&#x3D;\frac{Z}{\gamma}&#x3D;\sqrt{\frac{Z}{Y}}&#x3D;\sqrt{\frac{R_0+j \omega L_0}{G_0+j \omega C_0}}$称为特征阻抗</p><h2 id="坐标系方向变换"><a href="#坐标系方向变换" class="headerlink" title="坐标系方向变换"></a>坐标系方向变换</h2>]]></content>
+    
+    
+    <categories>
+      
+      <category>笔记</category>
+      
+      <category>微波技术</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>微波技术</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>矩形波导中的场分布</title>
     <link href="/2025/03/26/%E5%BE%AE%E6%B3%A2%E6%8A%80%E6%9C%AF/%E7%9F%A9%E5%BD%A2%E6%B3%A2%E5%AF%BC%E4%B8%AD%E7%9A%84%E5%9C%BA%E5%88%86%E5%B8%83/"/>
     <url>/2025/03/26/%E5%BE%AE%E6%B3%A2%E6%8A%80%E6%9C%AF/%E7%9F%A9%E5%BD%A2%E6%B3%A2%E5%AF%BC%E4%B8%AD%E7%9A%84%E5%9C%BA%E5%88%86%E5%B8%83/</url>
