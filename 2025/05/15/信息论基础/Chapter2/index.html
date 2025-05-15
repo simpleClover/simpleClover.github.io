@@ -19,23 +19,22 @@
   <meta name="author" content="404 Not Found">
   <meta name="keywords" content="">
   
-    <meta name="description" content="矩形波导与圆波导都是常见的波导，本文主要讲解矩形波导的参数计算">
+    <meta name="description" content="第二章 熵、相对熵与互信息2.1 离散型随机变量的熵熵是随机变量不确定度的度量，对于一个字母表为$\mathcal{X}$的离散随机变量$X$，若其概率密度函数$p(x)&#x3D;\Pr(X&#x3D;x),x \in \mathcal{X}$，则离散型随机变量$X$的熵$H(X)$定义为  $$ H(X)&#x3D;-\sum_{x \in \mathcal{X}} p(x) \log p(x) $$">
 <meta property="og:type" content="article">
-<meta property="og:title" content="矩形波导中的场分布">
-<meta property="og:url" content="https://simpleclover.github.io/2025/03/26/%E5%BE%AE%E6%B3%A2%E6%8A%80%E6%9C%AF/%E7%9F%A9%E5%BD%A2%E6%B3%A2%E5%AF%BC%E4%B8%AD%E7%9A%84%E5%9C%BA%E5%88%86%E5%B8%83/index.html">
+<meta property="og:title" content="信息论基础——第二章">
+<meta property="og:url" content="https://simpleclover.github.io/2025/05/15/%E4%BF%A1%E6%81%AF%E8%AE%BA%E5%9F%BA%E7%A1%80/Chapter2/index.html">
 <meta property="og:site_name" content="404 Not Foundの奇妙小屋">
-<meta property="og:description" content="矩形波导与圆波导都是常见的波导，本文主要讲解矩形波导的参数计算">
+<meta property="og:description" content="第二章 熵、相对熵与互信息2.1 离散型随机变量的熵熵是随机变量不确定度的度量，对于一个字母表为$\mathcal{X}$的离散随机变量$X$，若其概率密度函数$p(x)&#x3D;\Pr(X&#x3D;x),x \in \mathcal{X}$，则离散型随机变量$X$的熵$H(X)$定义为  $$ H(X)&#x3D;-\sum_{x \in \mathcal{X}} p(x) \log p(x) $$">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-03-26T14:47:22.000Z">
-<meta property="article:modified_time" content="2025-03-30T16:00:58.364Z">
+<meta property="article:published_time" content="2025-05-14T16:33:16.000Z">
+<meta property="article:modified_time" content="2025-05-15T02:31:59.471Z">
 <meta property="article:author" content="404 Not Found">
-<meta property="article:tag" content="微波技术">
-<meta property="article:tag" content="矩形波导">
+<meta property="article:tag" content="信息论基础">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>矩形波导中的场分布 - 404 Not Foundの奇妙小屋</title>
+  <title>信息论基础——第二章 - 404 Not Foundの奇妙小屋</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -216,7 +215,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="矩形波导中的场分布"></span>
+            <span id="subtitle" data-typed-text="信息论基础——第二章"></span>
           
         </div>
 
@@ -232,8 +231,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-03-26 22:47" pubdate>
-          2025年3月26日 晚上
+        <time datetime="2025-05-15 00:33" pubdate>
+          2025年5月15日 凌晨
         </time>
       </span>
     
@@ -244,7 +243,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          789 字
+          799 字
         
       </span>
     
@@ -326,17 +325,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="信息论基础"
         id="heading-830d5ead33c9940b35c782aaac63b8ba" role="tab" data-toggle="collapse" href="#collapse-830d5ead33c9940b35c782aaac63b8ba"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         信息论基础
         <span class="list-group-count">(2)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse " id="collapse-830d5ead33c9940b35c782aaac63b8ba"
+      <div class="category-collapse collapse show" id="collapse-830d5ead33c9940b35c782aaac63b8ba"
            role="tabpanel" aria-labelledby="heading-830d5ead33c9940b35c782aaac63b8ba">
         
         
@@ -348,7 +347,7 @@
       
         <a href="/2025/05/15/%E4%BF%A1%E6%81%AF%E8%AE%BA%E5%9F%BA%E7%A1%80/Chapter2/" title="信息论基础——第二章"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">信息论基础——第二章</span>
         </a>
       
@@ -372,17 +371,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="微波技术"
         id="heading-169ffea6a87a1e5f152c14efb4bfb5e9" role="tab" data-toggle="collapse" href="#collapse-169ffea6a87a1e5f152c14efb4bfb5e9"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         微波技术
         <span class="list-group-count">(3)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-169ffea6a87a1e5f152c14efb4bfb5e9"
+      <div class="category-collapse collapse " id="collapse-169ffea6a87a1e5f152c14efb4bfb5e9"
            role="tabpanel" aria-labelledby="heading-169ffea6a87a1e5f152c14efb4bfb5e9">
         
         
@@ -412,7 +411,7 @@
       
         <a href="/2025/03/26/%E5%BE%AE%E6%B3%A2%E6%8A%80%E6%9C%AF/%E7%9F%A9%E5%BD%A2%E6%B3%A2%E5%AF%BC%E4%B8%AD%E7%9A%84%E5%9C%BA%E5%88%86%E5%B8%83/" title="矩形波导中的场分布"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">矩形波导中的场分布</span>
         </a>
       
@@ -439,12 +438,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">矩形波导中的场分布</h1>
+            <h1 id="seo-header">信息论基础——第二章</h1>
             
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    本文最后更新于 2025-03-31T00:00:58+08:00
+                    本文最后更新于 2025-05-15T10:31:59+08:00
                   
                   
 
@@ -454,126 +453,91 @@
             
               <div class="markdown-body">
                 
-                <h1 id="矩形波导中的场分布"><a href="#矩形波导中的场分布" class="headerlink" title="矩形波导中的场分布"></a>矩形波导中的场分布</h1><p>由导行波分析可知矩形波导中不可能存在TEM波，只可能存在TM波和TE波。<br>对于TM波，波导内的电磁场由$E_z$确定。对于TE波，波导内的电磁场由$H_z$确定。下面我们将对于一个宽为a，高为b的矩形波导进行分析</p>
-<h2 id="矩形波导中的TM波"><a href="#矩形波导中的TM波" class="headerlink" title="矩形波导中的TM波"></a>矩形波导中的TM波</h2><p>根据电磁波纵向分量满足的波动方程和边界条件，我们便可以算出波导内波的分布</p>
+                <h1 id="第二章-熵、相对熵与互信息"><a href="#第二章-熵、相对熵与互信息" class="headerlink" title="第二章 熵、相对熵与互信息"></a>第二章 熵、相对熵与互信息</h1><h2 id="2-1-离散型随机变量的熵"><a href="#2-1-离散型随机变量的熵" class="headerlink" title="2.1 离散型随机变量的熵"></a>2.1 离散型随机变量的熵</h2><p>熵是随机变量不确定度的度量，对于一个字母表为$\mathcal{X}$的离散随机变量$X$，若其概率密度函数$p(x)&#x3D;\Pr(X&#x3D;x),x \in \mathcal{X}$，则离散型随机变量$X$的熵$H(X)$定义为</p>
 <p>
 $$
-\left(\dfrac{\partial^{2}}{\partial x^2}+\dfrac{\partial^{2}}{\partial y^2}+\dfrac{\partial^{2}}{\partial z^2}\right)E_z+k^2E_z=0
+H(X)=-\sum_{x \in \mathcal{X}} p(x) \log p(x)
 $$
-</p><p>将$E_z(x,y,z)&#x3D;E_z(x,y)e^{-\gamma z}$代入上式便可得到</p>
+</p><p>其中，当$\log$的底为$2$时，$H(X)$的单位为比特（bit），当$\log$的底为$e$时，$H(X)$的单位为奈特（nat）。如果使用$b$作为$\log$的底，那么熵被记为$H_b(X)$</p>
+<p>由于当 $x \to 0$时$x \log x \to 0$，所以我们约定当$p(x)&#x3D;0$时$p(x) \log p(x)&#x3D;0$，因为加上零概率的事件不会增加熵的值</p>
+<p>用$E$表示数学期望，如果$X \sim p(x)$，则随机变量$g(X)$的期望为</p>
 <p>
 $$
-\left(\dfrac{\partial^{2}}{\partial x^2}+\dfrac{\partial^{2}}{\partial y^2}+k_c^2\right)E_z(x,y)=0
+Eg(X)=\sum_{x \in \mathcal{X}} p(x) g(x)
 $$
-</p><p>此时分离变量，令$E_z(x,y)&#x3D;f(x)g(y)$，$k_c^2&#x3D;k_x^2+k_y^2$，则有</p>
+</p><p>可以发现，熵$H(X)$就是随机变量$X$的函数$g(X)&#x3D;-\log p(X)$的期望值</p>
 <p>
 $$
-\begin{array}{c}
-f''(x)g(y)+f(x)g''(y)+(k_x^2+k_y^2)f(x)g(y)=0 \\
-\dfrac{f''(x)}{f(x)}+ k_x^2+\dfrac{g''(y)}{g(y)} +k_y^2 = 0
-\end{array}
+H(X) = E [-\log p(X)]
 $$
-</p><p>对于电场，其边界条件为</p>
+</p><p>有一些常用的熵表达方式</p>
 <p>
 $$
-\begin{array}{cc}
-E_z\big|_{x=0}=0 &amp; E_z\big|_{x=a}=0 \\
-E_z\big|_{y=0}=0 &amp; E_z\big|_{y=b}=0 
-\end{array}
+\begin{align}
+H(p) = -p\log p - (1-p) \log (1-p) \\
+H(\alpha,\beta,\dots) = -\alpha \log \alpha - \beta \log \beta \dots
+\end{align}
 $$
-</p><p>则问题可分为两个微分方程的求解</p>
+</p><h3 id="2-1-1-熵的性质"><a href="#2-1-1-熵的性质" class="headerlink" title="2.1.1 熵的性质"></a>2.1.1 熵的性质</h3><h4 id="H-X-geq-0"><a href="#H-X-geq-0" class="headerlink" title="$H(X) \geq 0$"></a>$H(X) \geq 0$</h4><p>由$0 \leq p(x) \leq 1$可知$\log p(x) \leq 0$，所以$\displaystyle H(X) &#x3D; -\sum_{x \in \mathcal{X}} p(x) \log p(x) \geq 0$</p>
+<h4 id="H-b-X-log-b-a-H-a-X"><a href="#H-b-X-log-b-a-H-a-X" class="headerlink" title="$H_b(X)&#x3D;\log_b a H_a(X)$"></a>$H_b(X)&#x3D;\log_b a H_a(X)$</h4><p>
+$$
+\begin{align}
+H_b(X) &amp;= -\sum_{x \in \mathcal{X}} p(x) \log_b p(x) \\
+&amp;= -\sum_{x \in \mathcal{X}} p(x) \frac{\log_a p(x)}{\log_a b} \\
+&amp;= \log_a b H_a(X)
+\end{align}
+$$
+</p><!-- 
+#### $H(X) \leq \log |\mathcal{X}|$
+
+$$
+\begin{align}
+H(X) &= -\sum_{x \in \mathcal{X}} p(x) \log p(x) \\
+&\leq -\sum_{x \in \mathcal{X}} p(x) \log \frac{1}{|\mathcal{X}|} \\
+&= \log |\mathcal{X}|
+\end{align}
+$$ -->
+
+<h2 id="2-2-联合熵与条件熵"><a href="#2-2-联合熵与条件熵" class="headerlink" title="2.2 联合熵与条件熵"></a>2.2 联合熵与条件熵</h2><p>对于服从联合分布为$p(x,y)$的随机变量$X$和$Y$，其联合熵$H(X,Y)$定义为</p>
 <p>
 $$
-\begin{array}{l}
-\begin{cases}
-f''(x)+k_x^2f(x)=0 \\
-f(0)=0, f(a)=0
-\end{cases}
-\\
-\\
-\begin{cases}
-g''(y)+k_y^2g(y)=0 \\
-g(0)=0, g(b)=0
-\end{cases}
-\end{array}
+H(X,Y)=-\sum_{x \in \mathcal{X}} \sum_{y \in \mathcal{Y}} p(x,y) \log p(x,y)
 $$
-</p><p>求其通解</p>
+</p><h3 id="2-2-1-链式法则"><a href="#2-2-1-链式法则" class="headerlink" title="2.2.1 链式法则"></a>2.2.1 链式法则</h3><p>根据概率的链式法则有$p(x,y)&#x3D;p(x)p(y|x)$，那么</p>
 <p>
 $$
-\begin{array}{c}
-f(x)=A\textrm{sin}(k_xx)+B\textrm{cos}(k_xx) \\
-g(y)=C\textrm{sin}(k_yy)+D\textrm{cos}(k_yy) 
-\end{array}
+\begin{align}
+H(X,Y)&amp;=-\sum_{x \in \mathcal{X}} \sum_{y \in \mathcal{Y}} p(x,y) \log p(x,y) \\
+&amp;= -\sum_{x \in \mathcal{X}} \sum_{y \in \mathcal{Y}} p(x,y) \log p(x) - \sum_{x \in \mathcal{X}} \sum_{y \in \mathcal{Y}} p(x,y) \log p(y|x) \\
+&amp;= -\sum_{x \in \mathcal{X}} p(x) \log p(x) - \sum_{x \in \mathcal{X}} \sum_{y \in \mathcal{Y}} p(x,y) \log p(y|x) \\
+&amp;= H(X) + H(Y|X) \\
+&amp;= H(Y) + H(X|Y)
+\end{align}
 $$
-</p><p>由$f(0)&#x3D;0,g(0)&#x3D;0$可知$B&#x3D;0,D&#x3D;0$。</p>
-<p>再由$f(a)&#x3D;0,g(b)&#x3D;0$可得</p>
+</p><p>该式也叫做链式法则，其中$\displaystyle H(Y|X)&#x3D; - \sum_{x \in \mathcal{X}} \sum_{y \in \mathcal{Y}} p(x,y) \log p(y|x)$为条件熵</p>
+<p>在等式两侧同时加上条件$Z$，亦可得</p>
 <p>
 $$
-\begin{array}{l}
-f(x)=A\textrm{sin}(k_xa)=0\\
-g(y)=C\textrm{sin}(k_yb)=0
-\end{array}
+\begin{align}
+H(X,Y|Z) &amp;= H(X|Z) + H(Y|X,Z) \\
+&amp;= H(Y|Z) + H(X|Y,Z) \\
+\end{align}
 $$
-</p><p>即</p>
+</p><h2 id="2-3-相对熵与互信息"><a href="#2-3-相对熵与互信息" class="headerlink" title="2.3 相对熵与互信息"></a>2.3 相对熵与互信息</h2><p>相对熵是两个随机分布之间距离的度量，相对熵被定义为</p>
 <p>
 $$
-\begin{array}{lc}
-\displaystyle k_x=\frac{m\pi}{a} &amp; m=1,2,3\dots \\
-\displaystyle k_y=\frac{n\pi}{b} &amp; n=1,2,3\dots
-\end{array}
+D(p \| q) = \sum_{x \in \mathcal{X}} p(x) \log \frac{p(x)}{q(x)}
 $$
-</p><p>将其带入分离变量的方程，则有</p>
+</p><p>相对熵描述了当真实分布为$p$而假定分布是$q$时的无效性，或者说是分布$p$和$q$之间的“距离”</p>
+<p>互信息是一个随机变量包含另一个随机变量信息量的度量，考虑两个随机变量$X$和$Y$，互信息被定义为</p>
 <p>
 $$
-\begin{array}{c}
-E_z(x,y)=f(x)g(y)=E_m\textrm{sin}(\dfrac{m\pi}{a}x)\textrm{sin}(\dfrac{n\pi}{b}y) \quad m,n=1,2,3\dots \\
-k_{cmn}^2 = \left(\dfrac{m\pi}{a}\right)^2+\left(\dfrac{n\pi}{b}\right)^2
-\end{array}
+\begin{align}
+I(X;Y) &amp;= D(p(x,y)\| p(x)p(y))\\
+&amp; = \sum_{x\in \mathcal{X},y \in \mathcal{Y}} p(x,y) \log \frac{p(x,y)}{p(x)p(y)}
+\end{align}
 $$
-</p><p>可见截止波数只与波导的尺寸有关，且一组$mn$对应一组模式，记作$\textrm{TM}_{mn}$</p>
-<h2 id="矩形波导中的TE波"><a href="#矩形波导中的TE波" class="headerlink" title="矩形波导中的TE波"></a>矩形波导中的TE波</h2><p>与TM波分析方法类似，对于$H_z(x,y)&#x3D;f(x)g(y)$，有</p>
-<p>
-$$
-\begin{array}{c}
-f(a)=A\textrm{sin}(k_xx)+B\textrm{cos}(k_xx) \\
-g(b)=C\textrm{sin}(k_yy)+D\textrm{cos}(k_yy) 
-\end{array}
-$$
-</p><p>但与之不同的是边界条件，对于磁场，其边界条件为</p>
-<p>
-$$
-\begin{array}{cc}
-\dfrac{\partial H_z}{\partial x}\big|_{x=0}=0 &amp; \dfrac{\partial H_z}{\partial x}\big|_{x=a}=0 \\
-\dfrac{\partial H_z}{\partial y}\big|_{y=0}=0 &amp; \dfrac{\partial H_z}{\partial y}\big|_{y=b}=0
-\end{array}
-$$
-</p><p>则有 $A&#x3D;C&#x3D;0$，且</p>
-<p>
-$$
-\begin{array}{c}
-f'(a) = -Bk_x\textrm{sin}(k_xa) = 0\\
-g'(b) = -Dk_y\textrm{sin}(k_yb) = 0
-\end{array}
-$$
-</p><p>则有</p>
-<p>
-$$
-\begin{array}{lc}
-\displaystyle k_x=\frac{m\pi}{a} &amp; m=0,1,2\dots \\
-\displaystyle k_y=\frac{n\pi}{b} &amp; n=0,1,2\dots
-\end{array}
-$$
-</p><p>最终得到</p>
-<p>
-$$
-\begin{array}{c}
-H_z(x,y)=f(x)g(y)=H_m\textrm{cos}(\dfrac{m\pi}{a}x)\textrm{cos}(\dfrac{n\pi}{b}y) \quad m,n=0,1,2\dots \\
-k_{cmn}^2 = \left(\dfrac{m\pi}{a}\right)^2+\left(\dfrac{n\pi}{b}\right)^2
-\end{array}
-$$
-</p><div class="note note-success">
-            <p>注意到对于TM波m和n不可为0，但在TE波中m和n不能同时取0</p>
-          </div>
+</p><h3 id="2-3-1-相对熵的性质"><a href="#2-3-1-相对熵的性质" class="headerlink" title="2.3.1 相对熵的性质"></a>2.3.1 相对熵的性质</h3>
                 
               </div>
             
@@ -596,7 +560,7 @@ $$
   
     <span>></span>
     
-  <a href="/categories/%E7%AC%94%E8%AE%B0/%E5%BE%AE%E6%B3%A2%E6%8A%80%E6%9C%AF/" class="category-chain-item">微波技术</a>
+  <a href="/categories/%E7%AC%94%E8%AE%B0/%E4%BF%A1%E6%81%AF%E8%AE%BA%E5%9F%BA%E7%A1%80/" class="category-chain-item">信息论基础</a>
   
   
 
@@ -613,9 +577,7 @@ $$
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E5%BE%AE%E6%B3%A2%E6%8A%80%E6%9C%AF/" class="print-no-link">#微波技术</a>
-      
-        <a href="/tags/%E7%9F%A9%E5%BD%A2%E6%B3%A2%E5%AF%BC/" class="print-no-link">#矩形波导</a>
+        <a href="/tags/%E4%BF%A1%E6%81%AF%E8%AE%BA%E5%9F%BA%E7%A1%80/" class="print-no-link">#信息论基础</a>
       
     </div>
   
@@ -627,8 +589,8 @@ $$
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>矩形波导中的场分布</div>
-      <div>https://simpleclover.github.io/2025/03/26/微波技术/矩形波导中的场分布/</div>
+      <div>信息论基础——第二章</div>
+      <div>https://simpleclover.github.io/2025/05/15/信息论基础/Chapter2/</div>
     </div>
     <div class="license-meta">
       
@@ -640,7 +602,7 @@ $$
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年3月26日</div>
+          <div>2025年5月15日</div>
         </div>
       
       
@@ -684,18 +646,12 @@ $$
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/03/30/%E5%BE%AE%E6%B3%A2%E6%8A%80%E6%9C%AF/%E4%BC%A0%E8%BE%93%E7%BA%BF%E7%90%86%E8%AE%BA/" title="传输线理论">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">传输线理论</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/03/12/%E5%BE%AE%E6%B3%A2%E6%8A%80%E6%9C%AF/%E5%AF%BC%E8%A1%8C%E6%B3%A2%E5%88%86%E6%9E%90%E6%96%B9%E6%B3%95/" title="导行波分析方法">
-                        <span class="hidden-mobile">导行波分析方法</span>
+                      <a href="/2025/04/30/%E4%BF%A1%E6%81%AF%E8%AE%BA%E5%9F%BA%E7%A1%80/%E4%BF%A1%E6%81%AF%E8%AE%BA%E7%BB%AA%E8%AE%BA/" title="信息论基础——绪论">
+                        <span class="hidden-mobile">信息论基础——绪论</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

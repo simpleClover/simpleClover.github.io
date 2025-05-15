@@ -4,6 +4,60 @@
   
   
   <entry>
+    <title>信息论基础——第二章</title>
+    <link href="/2025/05/15/%E4%BF%A1%E6%81%AF%E8%AE%BA%E5%9F%BA%E7%A1%80/Chapter2/"/>
+    <url>/2025/05/15/%E4%BF%A1%E6%81%AF%E8%AE%BA%E5%9F%BA%E7%A1%80/Chapter2/</url>
+    
+    <content type="html"><![CDATA[<h1 id="第二章-熵、相对熵与互信息"><a href="#第二章-熵、相对熵与互信息" class="headerlink" title="第二章 熵、相对熵与互信息"></a>第二章 熵、相对熵与互信息</h1><h2 id="2-1-离散型随机变量的熵"><a href="#2-1-离散型随机变量的熵" class="headerlink" title="2.1 离散型随机变量的熵"></a>2.1 离散型随机变量的熵</h2><p>熵是随机变量不确定度的度量，对于一个字母表为$\mathcal{X}$的离散随机变量$X$，若其概率密度函数$p(x)&#x3D;\Pr(X&#x3D;x),x \in \mathcal{X}$，则离散型随机变量$X$的熵$H(X)$定义为</p><p>$$H(X)=-\sum_{x \in \mathcal{X}} p(x) \log p(x)$$</p><p>其中，当$\log$的底为$2$时，$H(X)$的单位为比特（bit），当$\log$的底为$e$时，$H(X)$的单位为奈特（nat）。如果使用$b$作为$\log$的底，那么熵被记为$H_b(X)$</p><p>由于当 $x \to 0$时$x \log x \to 0$，所以我们约定当$p(x)&#x3D;0$时$p(x) \log p(x)&#x3D;0$，因为加上零概率的事件不会增加熵的值</p><p>用$E$表示数学期望，如果$X \sim p(x)$，则随机变量$g(X)$的期望为</p><p>$$Eg(X)=\sum_{x \in \mathcal{X}} p(x) g(x)$$</p><p>可以发现，熵$H(X)$就是随机变量$X$的函数$g(X)&#x3D;-\log p(X)$的期望值</p><p>$$H(X) = E [-\log p(X)]$$</p><p>有一些常用的熵表达方式</p><p>$$\begin{align}H(p) = -p\log p - (1-p) \log (1-p) \\H(\alpha,\beta,\dots) = -\alpha \log \alpha - \beta \log \beta \dots\end{align}$$</p><h3 id="2-1-1-熵的性质"><a href="#2-1-1-熵的性质" class="headerlink" title="2.1.1 熵的性质"></a>2.1.1 熵的性质</h3><h4 id="H-X-geq-0"><a href="#H-X-geq-0" class="headerlink" title="$H(X) \geq 0$"></a>$H(X) \geq 0$</h4><p>由$0 \leq p(x) \leq 1$可知$\log p(x) \leq 0$，所以$\displaystyle H(X) &#x3D; -\sum_{x \in \mathcal{X}} p(x) \log p(x) \geq 0$</p><h4 id="H-b-X-log-b-a-H-a-X"><a href="#H-b-X-log-b-a-H-a-X" class="headerlink" title="$H_b(X)&#x3D;\log_b a H_a(X)$"></a>$H_b(X)&#x3D;\log_b a H_a(X)$</h4><p>$$\begin{align}H_b(X) &amp;= -\sum_{x \in \mathcal{X}} p(x) \log_b p(x) \\&amp;= -\sum_{x \in \mathcal{X}} p(x) \frac{\log_a p(x)}{\log_a b} \\&amp;= \log_a b H_a(X)\end{align}$$</p><!-- #### $H(X) \leq \log |\mathcal{X}|$$$\begin{align}H(X) &= -\sum_{x \in \mathcal{X}} p(x) \log p(x) \\&\leq -\sum_{x \in \mathcal{X}} p(x) \log \frac{1}{|\mathcal{X}|} \\&= \log |\mathcal{X}|\end{align}$$ --><h2 id="2-2-联合熵与条件熵"><a href="#2-2-联合熵与条件熵" class="headerlink" title="2.2 联合熵与条件熵"></a>2.2 联合熵与条件熵</h2><p>对于服从联合分布为$p(x,y)$的随机变量$X$和$Y$，其联合熵$H(X,Y)$定义为</p><p>$$H(X,Y)=-\sum_{x \in \mathcal{X}} \sum_{y \in \mathcal{Y}} p(x,y) \log p(x,y)$$</p><h3 id="2-2-1-链式法则"><a href="#2-2-1-链式法则" class="headerlink" title="2.2.1 链式法则"></a>2.2.1 链式法则</h3><p>根据概率的链式法则有$p(x,y)&#x3D;p(x)p(y|x)$，那么</p><p>$$\begin{align}H(X,Y)&amp;=-\sum_{x \in \mathcal{X}} \sum_{y \in \mathcal{Y}} p(x,y) \log p(x,y) \\&amp;= -\sum_{x \in \mathcal{X}} \sum_{y \in \mathcal{Y}} p(x,y) \log p(x) - \sum_{x \in \mathcal{X}} \sum_{y \in \mathcal{Y}} p(x,y) \log p(y|x) \\&amp;= -\sum_{x \in \mathcal{X}} p(x) \log p(x) - \sum_{x \in \mathcal{X}} \sum_{y \in \mathcal{Y}} p(x,y) \log p(y|x) \\&amp;= H(X) + H(Y|X) \\&amp;= H(Y) + H(X|Y)\end{align}$$</p><p>该式也叫做链式法则，其中$\displaystyle H(Y|X)&#x3D; - \sum_{x \in \mathcal{X}} \sum_{y \in \mathcal{Y}} p(x,y) \log p(y|x)$为条件熵</p><p>在等式两侧同时加上条件$Z$，亦可得</p><p>$$\begin{align}H(X,Y|Z) &amp;= H(X|Z) + H(Y|X,Z) \\&amp;= H(Y|Z) + H(X|Y,Z) \\\end{align}$$</p><h2 id="2-3-相对熵与互信息"><a href="#2-3-相对熵与互信息" class="headerlink" title="2.3 相对熵与互信息"></a>2.3 相对熵与互信息</h2><p>相对熵是两个随机分布之间距离的度量，相对熵被定义为</p><p>$$D(p \| q) = \sum_{x \in \mathcal{X}} p(x) \log \frac{p(x)}{q(x)}$$</p><p>相对熵描述了当真实分布为$p$而假定分布是$q$时的无效性，或者说是分布$p$和$q$之间的“距离”</p><p>互信息是一个随机变量包含另一个随机变量信息量的度量，考虑两个随机变量$X$和$Y$，互信息被定义为</p><p>$$\begin{align}I(X;Y) &amp;= D(p(x,y)\| p(x)p(y))\\&amp; = \sum_{x\in \mathcal{X},y \in \mathcal{Y}} p(x,y) \log \frac{p(x,y)}{p(x)p(y)}\end{align}$$</p><h3 id="2-3-1-相对熵的性质"><a href="#2-3-1-相对熵的性质" class="headerlink" title="2.3.1 相对熵的性质"></a>2.3.1 相对熵的性质</h3>]]></content>
+    
+    
+    <categories>
+      
+      <category>笔记</category>
+      
+      <category>信息论基础</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>信息论基础</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>信息论基础——绪论</title>
+    <link href="/2025/04/30/%E4%BF%A1%E6%81%AF%E8%AE%BA%E5%9F%BA%E7%A1%80/%E4%BF%A1%E6%81%AF%E8%AE%BA%E7%BB%AA%E8%AE%BA/"/>
+    <url>/2025/04/30/%E4%BF%A1%E6%81%AF%E8%AE%BA%E5%9F%BA%E7%A1%80/%E4%BF%A1%E6%81%AF%E8%AE%BA%E7%BB%AA%E8%AE%BA/</url>
+    
+    <content type="html"><![CDATA[<p>该笔记是作者在学习信息论基础时整理的随书笔记，用于复习巩固。笔记中会加入一些自己的理解，如果发现错误，欢迎指正。</p><p>配套书籍为Dimitri P. Bertsekas，John N. Tsitsiklis的《Introduction to Probability, 2nd Edition》的中文译本《信息论基础》  </p><p>出版社为机械工业出版社，ISBN<code>978-7-111-22040-4</code></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>笔记</category>
+      
+      <category>信息论基础</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>信息论基础</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>传输线理论</title>
     <link href="/2025/03/30/%E5%BE%AE%E6%B3%A2%E6%8A%80%E6%9C%AF/%E4%BC%A0%E8%BE%93%E7%BA%BF%E7%90%86%E8%AE%BA/"/>
     <url>/2025/03/30/%E5%BE%AE%E6%B3%A2%E6%8A%80%E6%9C%AF/%E4%BC%A0%E8%BE%93%E7%BA%BF%E7%90%86%E8%AE%BA/</url>
