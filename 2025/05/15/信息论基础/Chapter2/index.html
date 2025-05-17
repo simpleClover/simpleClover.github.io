@@ -19,15 +19,15 @@
   <meta name="author" content="404 Not Found">
   <meta name="keywords" content="">
   
-    <meta name="description" content="第二章 熵、相对熵与互信息2.1 离散型随机变量的熵熵是随机变量不确定度的度量，对于一个字母表为$\mathcal{X}$的离散随机变量$X$，若其概率密度函数$p(x)&#x3D;\Pr(X&#x3D;x),x \in \mathcal{X}$，则离散型随机变量$X$的熵$H(X)$定义为  $$ H(X)&#x3D;-\sum_{x \in \mathcal{X}} p(x) \log p(x) $$">
+    <meta name="description" content="第二章 熵、相对熵与互信息2.1 离散型随机变量的熵定义熵是随机变量不确定度的度量，对于一个字母表为$\mathcal{X}$的离散随机变量$X$，若其概率密度函数$p(x)&#x3D;\Pr(X&#x3D;x),x \in \mathcal{X}$，则离散型随机变量$X$的熵$H(X)$定义为  $$ H(X)&#x3D;-\sum_{x \in \mathcal{X}} p(x) \log p(x) $">
 <meta property="og:type" content="article">
 <meta property="og:title" content="信息论基础——第二章">
 <meta property="og:url" content="https://simpleclover.github.io/2025/05/15/%E4%BF%A1%E6%81%AF%E8%AE%BA%E5%9F%BA%E7%A1%80/Chapter2/index.html">
 <meta property="og:site_name" content="404 Not Foundの奇妙小屋">
-<meta property="og:description" content="第二章 熵、相对熵与互信息2.1 离散型随机变量的熵熵是随机变量不确定度的度量，对于一个字母表为$\mathcal{X}$的离散随机变量$X$，若其概率密度函数$p(x)&#x3D;\Pr(X&#x3D;x),x \in \mathcal{X}$，则离散型随机变量$X$的熵$H(X)$定义为  $$ H(X)&#x3D;-\sum_{x \in \mathcal{X}} p(x) \log p(x) $$">
+<meta property="og:description" content="第二章 熵、相对熵与互信息2.1 离散型随机变量的熵定义熵是随机变量不确定度的度量，对于一个字母表为$\mathcal{X}$的离散随机变量$X$，若其概率密度函数$p(x)&#x3D;\Pr(X&#x3D;x),x \in \mathcal{X}$，则离散型随机变量$X$的熵$H(X)$定义为  $$ H(X)&#x3D;-\sum_{x \in \mathcal{X}} p(x) \log p(x) $">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-05-14T16:33:16.000Z">
-<meta property="article:modified_time" content="2025-05-15T02:31:59.471Z">
+<meta property="article:modified_time" content="2025-05-17T15:46:10.850Z">
 <meta property="article:author" content="404 Not Found">
 <meta property="article:tag" content="信息论基础">
 <meta name="twitter:card" content="summary_large_image">
@@ -243,7 +243,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          799 字
+          1.7k 字
         
       </span>
     
@@ -254,7 +254,7 @@
         
         
         
-          7 分钟
+          14 分钟
         
       </span>
     
@@ -443,7 +443,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    本文最后更新于 2025-05-15T10:31:59+08:00
+                    本文最后更新于 2025-05-17T23:46:10+08:00
                   
                   
 
@@ -453,7 +453,7 @@
             
               <div class="markdown-body">
                 
-                <h1 id="第二章-熵、相对熵与互信息"><a href="#第二章-熵、相对熵与互信息" class="headerlink" title="第二章 熵、相对熵与互信息"></a>第二章 熵、相对熵与互信息</h1><h2 id="2-1-离散型随机变量的熵"><a href="#2-1-离散型随机变量的熵" class="headerlink" title="2.1 离散型随机变量的熵"></a>2.1 离散型随机变量的熵</h2><p>熵是随机变量不确定度的度量，对于一个字母表为$\mathcal{X}$的离散随机变量$X$，若其概率密度函数$p(x)&#x3D;\Pr(X&#x3D;x),x \in \mathcal{X}$，则离散型随机变量$X$的熵$H(X)$定义为</p>
+                <h1 id="第二章-熵、相对熵与互信息"><a href="#第二章-熵、相对熵与互信息" class="headerlink" title="第二章 熵、相对熵与互信息"></a>第二章 熵、相对熵与互信息</h1><h1 id="2-1-离散型随机变量的熵"><a href="#2-1-离散型随机变量的熵" class="headerlink" title="2.1 离散型随机变量的熵"></a>2.1 离散型随机变量的熵</h1><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>熵是随机变量不确定度的度量，对于一个字母表为$\mathcal{X}$的离散随机变量$X$，若其概率密度函数$p(x)&#x3D;\Pr(X&#x3D;x),x \in \mathcal{X}$，则离散型随机变量$X$的熵$H(X)$定义为</p>
 <p>
 $$
 H(X)=-\sum_{x \in \mathcal{X}} p(x) \log p(x)
@@ -478,7 +478,7 @@ H(p) = -p\log p - (1-p) \log (1-p) \\
 H(\alpha,\beta,\dots) = -\alpha \log \alpha - \beta \log \beta \dots
 \end{align}
 $$
-</p><h3 id="2-1-1-熵的性质"><a href="#2-1-1-熵的性质" class="headerlink" title="2.1.1 熵的性质"></a>2.1.1 熵的性质</h3><h4 id="H-X-geq-0"><a href="#H-X-geq-0" class="headerlink" title="$H(X) \geq 0$"></a>$H(X) \geq 0$</h4><p>由$0 \leq p(x) \leq 1$可知$\log p(x) \leq 0$，所以$\displaystyle H(X) &#x3D; -\sum_{x \in \mathcal{X}} p(x) \log p(x) \geq 0$</p>
+</p><h3 id="熵的性质"><a href="#熵的性质" class="headerlink" title="熵的性质"></a>熵的性质</h3><h4 id="H-X-geq-0"><a href="#H-X-geq-0" class="headerlink" title="$H(X) \geq 0$"></a>$H(X) \geq 0$</h4><p>由$0 \leq p(x) \leq 1$可知$\log p(x) \leq 0$，所以$\displaystyle H(X) &#x3D; -\sum_{x \in \mathcal{X}} p(x) \log p(x) \geq 0$</p>
 <h4 id="H-b-X-log-b-a-H-a-X"><a href="#H-b-X-log-b-a-H-a-X" class="headerlink" title="$H_b(X)&#x3D;\log_b a H_a(X)$"></a>$H_b(X)&#x3D;\log_b a H_a(X)$</h4><p>
 $$
 \begin{align}
@@ -487,23 +487,22 @@ H_b(X) &amp;= -\sum_{x \in \mathcal{X}} p(x) \log_b p(x) \\
 &amp;= \log_a b H_a(X)
 \end{align}
 $$
-</p><!-- 
-#### $H(X) \leq \log |\mathcal{X}|$
-
+</p><h4 id="H-X-leq-log-mathcal-X"><a href="#H-X-leq-log-mathcal-X" class="headerlink" title="$H(X) \leq \log |\mathcal{X}|$"></a>$H(X) \leq \log |\mathcal{X}|$</h4><p>设$u(x)&#x3D;\frac{1}{|\mathcal{X}|}$为$\mathcal{X}$上均匀分布的概率密度函数，$|\mathcal{X}|$表示$X$的字母表中元素的个数</p>
+<p>
 $$
 \begin{align}
-H(X) &= -\sum_{x \in \mathcal{X}} p(x) \log p(x) \\
-&\leq -\sum_{x \in \mathcal{X}} p(x) \log \frac{1}{|\mathcal{X}|} \\
-&= \log |\mathcal{X}|
+D(p||u) &amp;= \sum_{x \in \mathcal{X}} {p(x)\log \frac{p(x)}{u(x)}} \\
+&amp;= \sum_{x \in \mathcal{X}} {p(x)\log p(x)}  -\sum_{x \in \mathcal{X}} {p(x)\log u(x)} \\
+&amp;= - H(p) + \log |\mathcal{X}| \\
+&amp; \geq 0
 \end{align}
-$$ -->
-
-<h2 id="2-2-联合熵与条件熵"><a href="#2-2-联合熵与条件熵" class="headerlink" title="2.2 联合熵与条件熵"></a>2.2 联合熵与条件熵</h2><p>对于服从联合分布为$p(x,y)$的随机变量$X$和$Y$，其联合熵$H(X,Y)$定义为</p>
+$$
+</p><h1 id="2-2-联合熵与条件熵"><a href="#2-2-联合熵与条件熵" class="headerlink" title="2.2 联合熵与条件熵"></a>2.2 联合熵与条件熵</h1><h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3><p>对于服从联合分布为$p(x,y)$的随机变量$X$和$Y$，其联合熵$H(X,Y)$定义为</p>
 <p>
 $$
 H(X,Y)=-\sum_{x \in \mathcal{X}} \sum_{y \in \mathcal{Y}} p(x,y) \log p(x,y)
 $$
-</p><h3 id="2-2-1-链式法则"><a href="#2-2-1-链式法则" class="headerlink" title="2.2.1 链式法则"></a>2.2.1 链式法则</h3><p>根据概率的链式法则有$p(x,y)&#x3D;p(x)p(y|x)$，那么</p>
+</p><h3 id="链式法则"><a href="#链式法则" class="headerlink" title="链式法则"></a>链式法则</h3><p>根据概率链式法有$p(x,y)&#x3D;p(x)p(y|x)$，那么</p>
 <p>
 $$
 \begin{align}
@@ -514,30 +513,112 @@ H(X,Y)&amp;=-\sum_{x \in \mathcal{X}} \sum_{y \in \mathcal{Y}} p(x,y) \log p(x,y
 &amp;= H(Y) + H(X|Y)
 \end{align}
 $$
-</p><p>该式也叫做链式法则，其中$\displaystyle H(Y|X)&#x3D; - \sum_{x \in \mathcal{X}} \sum_{y \in \mathcal{Y}} p(x,y) \log p(y|x)$为条件熵</p>
-<p>在等式两侧同时加上条件$Z$，亦可得</p>
+</p><p>其中$\displaystyle H(Y|X)&#x3D; - \sum_{x \in \mathcal{X}} \sum_{y \in \mathcal{Y}} p(x,y) \log p(y|x)$为条件熵</p>
+<p>链式法则的一般形式如下</p>
+<p>
+$$
+H(X_1,\dots,X_n) = H(X_1) +H(X_2|X_1)+\dots+H(H_n|H_1,H_2,\dots,H_{n-1})
+$$
+</p><p>若为条件熵，亦有</p>
+<p>
+$$
+H(X_1,\dots,X_n|Z) = H(X_1|Z) +H(X_2|X_1,Z)+\dots+H(H_n|H_1,H_2,\dots,H_{n-1},Z)
+$$
+</p><h1 id="2-3-相对熵与互信息"><a href="#2-3-相对熵与互信息" class="headerlink" title="2.3 相对熵与互信息"></a>2.3 相对熵与互信息</h1><h3 id="定义-2"><a href="#定义-2" class="headerlink" title="定义"></a>定义</h3><p>相对熵是两个随机分布之间距离的度量，相对熵被定义为</p>
+<p>
+$$
+D(p \Vert q) = \sum_{x \in \mathcal{X}} p(x) \log \frac{p(x)}{q(x)}
+$$
+</p><p>互信息是一个随机变量包含另一个随机变量信息量的度量，考虑两个随机变量$X$和$Y$，互信息被定义为</p>
 <p>
 $$
 \begin{align}
-H(X,Y|Z) &amp;= H(X|Z) + H(Y|X,Z) \\
-&amp;= H(Y|Z) + H(X|Y,Z) \\
+I(X;Y) &amp;= D(p(x,y)\Vert p(x)p(y))\\
+&amp; = \sum_{x \in \mathcal{X}} \sum_{y \in \mathcal{Y}} p(x,y) \log \frac{p(x,y)}{p(x)p(y)}
 \end{align}
 $$
-</p><h2 id="2-3-相对熵与互信息"><a href="#2-3-相对熵与互信息" class="headerlink" title="2.3 相对熵与互信息"></a>2.3 相对熵与互信息</h2><p>相对熵是两个随机分布之间距离的度量，相对熵被定义为</p>
-<p>
-$$
-D(p \| q) = \sum_{x \in \mathcal{X}} p(x) \log \frac{p(x)}{q(x)}
-$$
-</p><p>相对熵描述了当真实分布为$p$而假定分布是$q$时的无效性，或者说是分布$p$和$q$之间的“距离”</p>
-<p>互信息是一个随机变量包含另一个随机变量信息量的度量，考虑两个随机变量$X$和$Y$，互信息被定义为</p>
+</p><p>相对熵描述了当真实分布为$p$而假定分布是$q$时的无效性，或者说是分布$p$和$q$之间的“距离”。例如已知随机变量的真实分布为$p$，那么可以构造平均长度为$H(p)$的码，但如果使用针对分布为$q$的编码，那么在平均意义上就需要使用$H(p)+D(p \Vert q)$比特来描述这个随机变量。</p>
 <p>
 $$
 \begin{align}
-I(X;Y) &amp;= D(p(x,y)\| p(x)p(y))\\
-&amp; = \sum_{x\in \mathcal{X},y \in \mathcal{Y}} p(x,y) \log \frac{p(x,y)}{p(x)p(y)}
+D(p \Vert q) &amp;= \sum_{x \in \mathcal{X}}{p(x)\log \frac{p(x)}{q(x)}} \\
+&amp;= \sum_{x \in \mathcal{X}}{p(x)\log p(x)} - \sum_{x \in \mathcal{X}}{p(x)\log q(x)} \\
+&amp;= -H(p)+H(p,q)
 \end{align}
 $$
-</p><h3 id="2-3-1-相对熵的性质"><a href="#2-3-1-相对熵的性质" class="headerlink" title="2.3.1 相对熵的性质"></a>2.3.1 相对熵的性质</h3>
+</p><p>即$H(p)&#x3D;H(p,q)+D(p \Vert q)$，这里$H(p,q)$为交叉熵。</p>
+<h1 id="2-4-熵与互信息量的关系"><a href="#2-4-熵与互信息量的关系" class="headerlink" title="2.4 熵与互信息量的关系"></a>2.4 熵与互信息量的关系</h1><p>
+$$
+\begin{align}
+I(X;Y) &amp;= \sum_{x \in \mathcal{X}} \sum_{y \in \mathcal{Y}} {p(x,y)\log \frac{p(x,y)}{p(x)p(y)}} \\
+&amp;= \sum_{x \in \mathcal{X}} \sum_{y \in \mathcal{Y}} {p(x,y)\log \frac{p(x)p(y|x)}{p(x)p(y)}} \\
+&amp;= \sum_{x \in \mathcal{X}} \sum_{y \in \mathcal{Y}} {p(x,y) \log p(y|x)} - \sum_{x \in \mathcal{X}} \sum_{y \in \mathcal{Y}} {p(x,y)\log p(y) } \\
+&amp;= \sum_{x \in \mathcal{X}} \sum_{y \in \mathcal{Y}} {p(x,y) \log p(y|x)} - \sum_{y \in \mathcal{Y}} {p(y)\log p(y) } \\
+&amp;= H(Y)-H(Y|X) \\
+&amp;= H(X)-H(X|Y)
+\end{align}
+$$
+</p><p>互信息量在公式上表现为随机变量$X$的不确定度减去随机变量$X$在得知条件$Y$下的不确定度，即互信息量表示的是$X$从$Y$中获取到的信息</p>
+<h1 id="2-5-相对熵与互信息的链式法则"><a href="#2-5-相对熵与互信息的链式法则" class="headerlink" title="2.5 相对熵与互信息的链式法则"></a>2.5 相对熵与互信息的链式法则</h1><h3 id="相对熵的链式法则"><a href="#相对熵的链式法则" class="headerlink" title="相对熵的链式法则"></a>相对熵的链式法则</h3><p>
+$$
+\begin{align}
+&amp;D(p(x,y)||q(x,y)) \\
+&amp;= \sum_x \sum_y p(x,y) \log \frac{p(x,y)}{q(x,y)} \\
+&amp;= \sum_x \sum_y p(x,y) \log \frac{p(x)p(y|x)}{q(x)q(y|x)} \\
+&amp;= \sum_x \sum_y p(x,y) \log \frac{p(x)}{q(x)} + \sum_x p(x) \sum_y p(y|x) \log \frac{p(y|x)}{q(y|x)} \\
+&amp;= D(p(x) \Vert q(x)) +D(p(y|x) \Vert q(y|x))
+\end{align}
+$$
+</p><h3 id="互信息的链式法则"><a href="#互信息的链式法则" class="headerlink" title="互信息的链式法则"></a>互信息的链式法则</h3><p>
+$$
+\begin{align}
+&amp;I(X_1,X_2,\dots,X_n;Y) \\
+&amp;=H(X_1,X_2,\dots,X_n)-H(X_1,X_2,\dots,X_n|Y) \\
+&amp;=\sum_{i-1}^n H(X_i|X_1,\dots,X_{i-1}) - \sum_{i-1}^n H(X_i|X_1,\dots,X_{i-1}|,Y) \\
+&amp;=\sum_{i-1}^n I(X_i;Y|X_1,\dots,X_{i-1})
+\end{align}
+$$
+</p><h1 id="2-6-Jensen不等式"><a href="#2-6-Jensen不等式" class="headerlink" title="2.6 Jensen不等式"></a>2.6 Jensen不等式</h1><h3 id="凸函数"><a href="#凸函数" class="headerlink" title="凸函数"></a>凸函数</h3><p>对于任意的$x_1,x_2 \in (a,b)$及$0 \leq \lambda \leq 1$，如果满足</p>
+<p>
+$$
+f(\lambda x_1 +(1-\lambda) x_2) \leq \lambda f(x_1 )+ (1-\lambda) f(x_2)
+$$
+</p><p>则称函数$f(x)$在区间$(a,b)$上是凸的。如果上述不等式仅在$\lambda &#x3D; 0$或$\lambda &#x3D; 1$时取得等号，那么称函数$f(x)$在区间$(a,b)$上是严格凸的。如果函数$-f$为凸函数，则称函数f是凹的。</p>
+<p>函数的凹凸性可由其二阶导判断</p>
+<p>将函数$f$在点$x_0$处泰勒展开</p>
+<p>
+$$
+f(x) = f(x_0)+f'(x_0)(x-x_0)+\frac{f''(x^*)}{2}(x-x_0)^2
+$$
+</p><p>其中$x^*$位于$x$与$x_0$之间。假设$f’’(x^*) \geq 0$，则有</p>
+<p>
+$$
+f(x) \geq f(x_0)+f'(x_0)(x-x_0)
+$$
+</p><p>设$x_0 &#x3D; \lambda x_1 +(1-\lambda)x_2$，取$x&#x3D;x_1$和$x&#x3D;x_2$，可得</p>
+<p>
+$$
+\begin{array}{c}
+f(x_1) \geq f(x_0)+f'(x_0)((1-\lambda)(x_1-x_2)) \\
+\\
+f(x_2) \geq f(x_0)+f'(x_0)(\lambda(x_2-x_1))
+\end{array}
+$$
+</p><p>则有</p>
+<p>
+$$
+\begin{align}
+&amp;\lambda f(x_1) +(1-\lambda) f(x_2) \\
+&amp;\geq \lambda f(x_0) + (1-\lambda)f(x_0)+\lambda(1-\lambda)(x_2-x_1+x_1-x_2)f'(x_0) \\
+&amp;=f(\lambda x_1 + (1-\lambda) x_2)
+\end{align}
+$$
+</p><h3 id="Jensen不等式"><a href="#Jensen不等式" class="headerlink" title="Jensen不等式"></a>Jensen不等式</h3><p>若给定一个凸函数$f$和一个随机变量$X$，则</p>
+<p>
+$$
+E(f(X)) \geq f(E(X))
+$$
+</p>
                 
               </div>
             
