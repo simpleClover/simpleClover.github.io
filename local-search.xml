@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>韦达定理扩展</title>
+    <link href="/2025/10/27/%E9%9F%A6%E8%BE%BE%E5%AE%9A%E7%90%86%E6%89%A9%E5%B1%95/"/>
+    <url>/2025/10/27/%E9%9F%A6%E8%BE%BE%E5%AE%9A%E7%90%86%E6%89%A9%E5%B1%95/</url>
+    
+    <content type="html"><![CDATA[<p>我们从小便知道韦达定理，但往往只接触到一元二次方程的韦达定理，即对于一元二次方程<br>$$ax^2+bx+c&#x3D;0$$<br>其根$x_1$和$x_2$满足以下关系</p><p>$$\begin{align}x_1+x_2 &amp;= -\frac{b}{a} \\x_{1}\cdot{}x_{2} &amp;= \frac{c}{a} \end{align}$$</p><p>其实韦达定理在n次方程上也有推广，对于一个多项式等式<br>$$a_0x^n+a_1x^{n-1}+\dots{}+a_{n-1}x+a_n&#x3D;0$$<br>我们知道其必然存在n个根$d_i(i&#x3D;1,2\dots,n)$<br>即方程可以改写为<br>$$a_0(x-d_1)(x-d_2)\dots(x-d_n)&#x3D;0$$<br>将其展开可以得到如下形式的方程<br>$$a_0x^n-a_0(d_1+d_2+\dots{}+d_n)x^{n-1}+a_0(d_1d_2+\dots{}+d_{n-1}d_n)x^{n-2}+\dots{}+(-1)^{n}a_{0}(d_{1}\dots{}d_{n})&#x3D;0$$<br>将其与多项式方程最初的形式对比，可以发现</p><p>$$\begin{align}a_{1}&amp;=-a_0(d_1+d_2+\dots{}+d_n) \\a_{2}&amp;=a_0(d_1d_2+\dots{}+d_{n-1}d_n) \\&amp;\dots \\a_{n}&amp;=(-1)^{n}a_{0}(d_{1}\dots{}d_{n})\end{align}$$</p><p>即我们可以得到</p><p>$$\begin{align}&amp;\sum_{i}{d_i}=-\frac{a_{1}}{a_{0}} \\&amp;\sum_{i\neq{}j}{d_id_j}=\frac{a_{2}}{a _{0}} \\&amp;\sum_{i\neq{}j\neq{k}}{d_id_jd_k}=-\frac{a_{3}}{a_{0}} \\&amp;\dots \\&amp;{d_1d_2\dots{}d_{n}}=(-1)^n\frac{a_{n}}{a_{0}}\end{align}$$</p><p>这就是韦达定理在n次多项式的推广</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>信息论基础——第二章</title>
     <link href="/2025/05/15/%E4%BF%A1%E6%81%AF%E8%AE%BA%E5%9F%BA%E7%A1%80/Chapter2/"/>
     <url>/2025/05/15/%E4%BF%A1%E6%81%AF%E8%AE%BA%E5%9F%BA%E7%A1%80/Chapter2/</url>

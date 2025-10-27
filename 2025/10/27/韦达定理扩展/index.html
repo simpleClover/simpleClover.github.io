@@ -19,22 +19,21 @@
   <meta name="author" content="404 Not Found">
   <meta name="keywords" content="">
   
-    <meta name="description" content="第二章 熵、相对熵与互信息2.1 离散型随机变量的熵定义熵是随机变量不确定度的度量，对于一个字母表为$\mathcal{X}$的离散随机变量$X$，若其概率密度函数$p(x)&#x3D;\Pr(X&#x3D;x),x \in \mathcal{X}$，则离散型随机变量$X$的熵$H(X)$定义为  $$ H(X)&#x3D;-\sum_{x \in \mathcal{X}} p(x) \log p(x) $">
+    <meta name="description" content="我们从小便知道韦达定理，但往往只接触到一元二次方程的韦达定理，即对于一元二次方程$$ax^2+bx+c&#x3D;0$$其根$x_1$和$x_2$满足以下关系  $$ \begin{align} x_1+x_2 &amp;&#x3D; -\frac{b}{a} \\ x_{1}\cdot{}x_{2} &amp;&#x3D; \frac{c}{a}  \end{align} $$ 其实韦达定理在n次方程上也有推广，对">
 <meta property="og:type" content="article">
-<meta property="og:title" content="信息论基础——第二章">
-<meta property="og:url" content="https://simpleclover.github.io/2025/05/15/%E4%BF%A1%E6%81%AF%E8%AE%BA%E5%9F%BA%E7%A1%80/Chapter2/index.html">
+<meta property="og:title" content="韦达定理扩展">
+<meta property="og:url" content="https://simpleclover.github.io/2025/10/27/%E9%9F%A6%E8%BE%BE%E5%AE%9A%E7%90%86%E6%89%A9%E5%B1%95/index.html">
 <meta property="og:site_name" content="404 Not Foundの奇妙小屋">
-<meta property="og:description" content="第二章 熵、相对熵与互信息2.1 离散型随机变量的熵定义熵是随机变量不确定度的度量，对于一个字母表为$\mathcal{X}$的离散随机变量$X$，若其概率密度函数$p(x)&#x3D;\Pr(X&#x3D;x),x \in \mathcal{X}$，则离散型随机变量$X$的熵$H(X)$定义为  $$ H(X)&#x3D;-\sum_{x \in \mathcal{X}} p(x) \log p(x) $">
+<meta property="og:description" content="我们从小便知道韦达定理，但往往只接触到一元二次方程的韦达定理，即对于一元二次方程$$ax^2+bx+c&#x3D;0$$其根$x_1$和$x_2$满足以下关系  $$ \begin{align} x_1+x_2 &amp;&#x3D; -\frac{b}{a} \\ x_{1}\cdot{}x_{2} &amp;&#x3D; \frac{c}{a}  \end{align} $$ 其实韦达定理在n次方程上也有推广，对">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-05-14T16:33:16.000Z">
-<meta property="article:modified_time" content="2025-05-17T15:46:10.850Z">
+<meta property="article:published_time" content="2025-10-27T05:02:17.000Z">
+<meta property="article:modified_time" content="2025-10-27T05:35:52.305Z">
 <meta property="article:author" content="404 Not Found">
-<meta property="article:tag" content="信息论基础">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>信息论基础——第二章 - 404 Not Foundの奇妙小屋</title>
+  <title>韦达定理扩展 - 404 Not Foundの奇妙小屋</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -215,7 +214,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="信息论基础——第二章"></span>
+            <span id="subtitle" data-typed-text="韦达定理扩展"></span>
           
         </div>
 
@@ -231,8 +230,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-05-15 00:33" pubdate>
-          2025年5月15日 凌晨
+        <time datetime="2025-10-27 13:02" pubdate>
+          2025年10月27日 下午
         </time>
       </span>
     
@@ -243,7 +242,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.7k 字
+          325 字
         
       </span>
     
@@ -254,7 +253,7 @@
         
         
         
-          14 分钟
+          3 分钟
         
       </span>
     
@@ -294,138 +293,6 @@
 <div class="category-list">
   
   
-    
-    
-    
-    <div class="category row nomargin-x">
-      <a class="category-item 
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="笔记"
-        id="heading-7051dc52c184c205e39aa54b4664ae9b" role="tab" data-toggle="collapse" href="#collapse-7051dc52c184c205e39aa54b4664ae9b"
-        aria-expanded="true"
-      >
-        笔记
-        <span class="list-group-count">(5)</span>
-        <i class="iconfont icon-arrowright"></i>
-      </a>
-      
-      <div class="category-collapse collapse show" id="collapse-7051dc52c184c205e39aa54b4664ae9b"
-           role="tabpanel" aria-labelledby="heading-7051dc52c184c205e39aa54b4664ae9b">
-        
-        
-          
-          
-  <div class="category-post-list">
-    
-    
-  </div>
-
-          
-  
-    
-    
-    
-    <div class="category-sub row nomargin-x">
-      <a class="category-subitem 
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="信息论基础"
-        id="heading-830d5ead33c9940b35c782aaac63b8ba" role="tab" data-toggle="collapse" href="#collapse-830d5ead33c9940b35c782aaac63b8ba"
-        aria-expanded="true"
-      >
-        信息论基础
-        <span class="list-group-count">(2)</span>
-        <i class="iconfont icon-arrowright"></i>
-      </a>
-      
-      <div class="category-collapse collapse show" id="collapse-830d5ead33c9940b35c782aaac63b8ba"
-           role="tabpanel" aria-labelledby="heading-830d5ead33c9940b35c782aaac63b8ba">
-        
-        
-          
-  <div class="category-post-list">
-    
-    
-      
-      
-        <a href="/2025/05/15/%E4%BF%A1%E6%81%AF%E8%AE%BA%E5%9F%BA%E7%A1%80/Chapter2/" title="信息论基础——第二章"
-           class="list-group-item list-group-item-action
-           active">
-          <span class="category-post">信息论基础——第二章</span>
-        </a>
-      
-    
-      
-      
-        <a href="/2025/04/30/%E4%BF%A1%E6%81%AF%E8%AE%BA%E5%9F%BA%E7%A1%80/%E4%BF%A1%E6%81%AF%E8%AE%BA%E7%BB%AA%E8%AE%BA/" title="信息论基础——绪论"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">信息论基础——绪论</span>
-        </a>
-      
-    
-  </div>
-
-        
-      </div>
-    </div>
-  
-    
-    
-    
-    <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="微波技术"
-        id="heading-169ffea6a87a1e5f152c14efb4bfb5e9" role="tab" data-toggle="collapse" href="#collapse-169ffea6a87a1e5f152c14efb4bfb5e9"
-        aria-expanded="false"
-      >
-        微波技术
-        <span class="list-group-count">(3)</span>
-        <i class="iconfont icon-arrowright"></i>
-      </a>
-      
-      <div class="category-collapse collapse " id="collapse-169ffea6a87a1e5f152c14efb4bfb5e9"
-           role="tabpanel" aria-labelledby="heading-169ffea6a87a1e5f152c14efb4bfb5e9">
-        
-        
-          
-  <div class="category-post-list">
-    
-    
-      
-      
-        <a href="/2025/03/30/%E5%BE%AE%E6%B3%A2%E6%8A%80%E6%9C%AF/%E4%BC%A0%E8%BE%93%E7%BA%BF%E7%90%86%E8%AE%BA/" title="传输线理论"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">传输线理论</span>
-        </a>
-      
-    
-      
-      
-        <a href="/2025/03/12/%E5%BE%AE%E6%B3%A2%E6%8A%80%E6%9C%AF/%E5%AF%BC%E8%A1%8C%E6%B3%A2%E5%88%86%E6%9E%90%E6%96%B9%E6%B3%95/" title="导行波分析方法"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">导行波分析方法</span>
-        </a>
-      
-    
-      
-      
-        <a href="/2025/03/26/%E5%BE%AE%E6%B3%A2%E6%8A%80%E6%9C%AF/%E7%9F%A9%E5%BD%A2%E6%B3%A2%E5%AF%BC%E4%B8%AD%E7%9A%84%E5%9C%BA%E5%88%86%E5%B8%83/" title="矩形波导中的场分布"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">矩形波导中的场分布</span>
-        </a>
-      
-    
-  </div>
-
-        
-      </div>
-    </div>
-  
-        
-      </div>
-    </div>
-  
 </div>
 
 
@@ -438,12 +305,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">信息论基础——第二章</h1>
+            <h1 id="seo-header">韦达定理扩展</h1>
             
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    本文最后更新于 2025-05-17T23:46:10+08:00
+                    本文最后更新于 2025-10-27T13:35:52+08:00
                   
                   
 
@@ -453,172 +320,37 @@
             
               <div class="markdown-body">
                 
-                <h1 id="第二章-熵、相对熵与互信息"><a href="#第二章-熵、相对熵与互信息" class="headerlink" title="第二章 熵、相对熵与互信息"></a>第二章 熵、相对熵与互信息</h1><h1 id="2-1-离散型随机变量的熵"><a href="#2-1-离散型随机变量的熵" class="headerlink" title="2.1 离散型随机变量的熵"></a>2.1 离散型随机变量的熵</h1><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>熵是随机变量不确定度的度量，对于一个字母表为$\mathcal{X}$的离散随机变量$X$，若其概率密度函数$p(x)&#x3D;\Pr(X&#x3D;x),x \in \mathcal{X}$，则离散型随机变量$X$的熵$H(X)$定义为</p>
-<p>
-$$
-H(X)=-\sum_{x \in \mathcal{X}} p(x) \log p(x)
-$$
-</p><p>其中，当$\log$的底为$2$时，$H(X)$的单位为比特（bit），当$\log$的底为$e$时，$H(X)$的单位为奈特（nat）。如果使用$b$作为$\log$的底，那么熵被记为$H_b(X)$</p>
-<p>由于当 $x \to 0$时$x \log x \to 0$，所以我们约定当$p(x)&#x3D;0$时$p(x) \log p(x)&#x3D;0$，因为加上零概率的事件不会增加熵的值</p>
-<p>用$E$表示数学期望，如果$X \sim p(x)$，则随机变量$g(X)$的期望为</p>
-<p>
-$$
-Eg(X)=\sum_{x \in \mathcal{X}} p(x) g(x)
-$$
-</p><p>可以发现，熵$H(X)$就是随机变量$X$的函数$g(X)&#x3D;-\log p(X)$的期望值</p>
-<p>
-$$
-H(X) = E [-\log p(X)]
-$$
-</p><p>有一些常用的熵表达方式</p>
+                <p>我们从小便知道韦达定理，但往往只接触到一元二次方程的韦达定理，即对于一元二次方程<br>$$ax^2+bx+c&#x3D;0$$<br>其根$x_1$和$x_2$满足以下关系</p>
 <p>
 $$
 \begin{align}
-H(p) = -p\log p - (1-p) \log (1-p) \\
-H(\alpha,\beta,\dots) = -\alpha \log \alpha - \beta \log \beta \dots
+x_1+x_2 &amp;= -\frac{b}{a} \\
+x_{1}\cdot{}x_{2} &amp;= \frac{c}{a} 
 \end{align}
 $$
-</p><h3 id="熵的性质"><a href="#熵的性质" class="headerlink" title="熵的性质"></a>熵的性质</h3><h4 id="H-X-geq-0"><a href="#H-X-geq-0" class="headerlink" title="$H(X) \geq 0$"></a>$H(X) \geq 0$</h4><p>由$0 \leq p(x) \leq 1$可知$\log p(x) \leq 0$，所以$\displaystyle H(X) &#x3D; -\sum_{x \in \mathcal{X}} p(x) \log p(x) \geq 0$</p>
-<h4 id="H-b-X-log-b-a-H-a-X"><a href="#H-b-X-log-b-a-H-a-X" class="headerlink" title="$H_b(X)&#x3D;\log_b a H_a(X)$"></a>$H_b(X)&#x3D;\log_b a H_a(X)$</h4><p>
-$$
-\begin{align}
-H_b(X) &amp;= -\sum_{x \in \mathcal{X}} p(x) \log_b p(x) \\
-&amp;= -\sum_{x \in \mathcal{X}} p(x) \frac{\log_a p(x)}{\log_a b} \\
-&amp;= \log_a b H_a(X)
-\end{align}
-$$
-</p><h4 id="H-X-leq-log-mathcal-X"><a href="#H-X-leq-log-mathcal-X" class="headerlink" title="$H(X) \leq \log |\mathcal{X}|$"></a>$H(X) \leq \log |\mathcal{X}|$</h4><p>设$u(x)&#x3D;\frac{1}{|\mathcal{X}|}$为$\mathcal{X}$上均匀分布的概率密度函数，$|\mathcal{X}|$表示$X$的字母表中元素的个数</p>
+</p><p>其实韦达定理在n次方程上也有推广，对于一个多项式等式<br>$$a_0x^n+a_1x^{n-1}+\dots{}+a_{n-1}x+a_n&#x3D;0$$<br>我们知道其必然存在n个根$d_i(i&#x3D;1,2\dots,n)$<br>即方程可以改写为<br>$$a_0(x-d_1)(x-d_2)\dots(x-d_n)&#x3D;0$$<br>将其展开可以得到如下形式的方程<br>$$a_0x^n-a_0(d_1+d_2+\dots{}+d_n)x^{n-1}+a_0(d_1d_2+\dots{}+d_{n-1}d_n)x^{n-2}+\dots{}+(-1)^{n}a_{0}(d_{1}\dots{}d_{n})&#x3D;0$$<br>将其与多项式方程最初的形式对比，可以发现</p>
 <p>
 $$
 \begin{align}
-D(p||u) &amp;= \sum_{x \in \mathcal{X}} {p(x)\log \frac{p(x)}{u(x)}} \\
-&amp;= \sum_{x \in \mathcal{X}} {p(x)\log p(x)}  -\sum_{x \in \mathcal{X}} {p(x)\log u(x)} \\
-&amp;= - H(p) + \log |\mathcal{X}| \\
-&amp; \geq 0
+a_{1}&amp;=-a_0(d_1+d_2+\dots{}+d_n) \\
+a_{2}&amp;=a_0(d_1d_2+\dots{}+d_{n-1}d_n) \\
+&amp;\dots \\
+a_{n}&amp;=(-1)^{n}a_{0}(d_{1}\dots{}d_{n})
 \end{align}
 $$
-</p><h1 id="2-2-联合熵与条件熵"><a href="#2-2-联合熵与条件熵" class="headerlink" title="2.2 联合熵与条件熵"></a>2.2 联合熵与条件熵</h1><h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3><p>对于服从联合分布为$p(x,y)$的随机变量$X$和$Y$，其联合熵$H(X,Y)$定义为</p>
-<p>
-$$
-H(X,Y)=-\sum_{x \in \mathcal{X}} \sum_{y \in \mathcal{Y}} p(x,y) \log p(x,y)
-$$
-</p><h3 id="链式法则"><a href="#链式法则" class="headerlink" title="链式法则"></a>链式法则</h3><p>根据概率链式法有$p(x,y)&#x3D;p(x)p(y|x)$，那么</p>
+</p><p>即我们可以得到</p>
 <p>
 $$
 \begin{align}
-H(X,Y)&amp;=-\sum_{x \in \mathcal{X}} \sum_{y \in \mathcal{Y}} p(x,y) \log p(x,y) \\
-&amp;= -\sum_{x \in \mathcal{X}} \sum_{y \in \mathcal{Y}} p(x,y) \log p(x) - \sum_{x \in \mathcal{X}} \sum_{y \in \mathcal{Y}} p(x,y) \log p(y|x) \\
-&amp;= -\sum_{x \in \mathcal{X}} p(x) \log p(x) - \sum_{x \in \mathcal{X}} \sum_{y \in \mathcal{Y}} p(x,y) \log p(y|x) \\
-&amp;= H(X) + H(Y|X) \\
-&amp;= H(Y) + H(X|Y)
+&amp;\sum_{i}{d_i}=-\frac{a_{1}}{a_{0}} \\
+&amp;\sum_{i\neq{}j}{d_id_j}=\frac{a_{2}}{a _{0}} \\
+&amp;\sum_{i\neq{}j\neq{k}}{d_id_jd_k}=-\frac{a_{3}}{a_{0}} \\
+&amp;\dots \\
+&amp;{d_1d_2\dots{}d_{n}}=(-1)^n\frac{a_{n}}{a_{0}}
 \end{align}
 $$
-</p><p>其中$\displaystyle H(Y|X)&#x3D; - \sum_{x \in \mathcal{X}} \sum_{y \in \mathcal{Y}} p(x,y) \log p(y|x)$为条件熵</p>
-<p>链式法则的一般形式如下</p>
-<p>
-$$
-H(X_1,\dots,X_n) = H(X_1) +H(X_2|X_1)+\dots+H(H_n|H_1,H_2,\dots,H_{n-1})
-$$
-</p><p>若为条件熵，亦有</p>
-<p>
-$$
-H(X_1,\dots,X_n|Z) = H(X_1|Z) +H(X_2|X_1,Z)+\dots+H(H_n|H_1,H_2,\dots,H_{n-1},Z)
-$$
-</p><h1 id="2-3-相对熵与互信息"><a href="#2-3-相对熵与互信息" class="headerlink" title="2.3 相对熵与互信息"></a>2.3 相对熵与互信息</h1><h3 id="定义-2"><a href="#定义-2" class="headerlink" title="定义"></a>定义</h3><p>相对熵是两个随机分布之间距离的度量，相对熵被定义为</p>
-<p>
-$$
-D(p \Vert q) = \sum_{x \in \mathcal{X}} p(x) \log \frac{p(x)}{q(x)}
-$$
-</p><p>互信息是一个随机变量包含另一个随机变量信息量的度量，考虑两个随机变量$X$和$Y$，互信息被定义为</p>
-<p>
-$$
-\begin{align}
-I(X;Y) &amp;= D(p(x,y)\Vert p(x)p(y))\\
-&amp; = \sum_{x \in \mathcal{X}} \sum_{y \in \mathcal{Y}} p(x,y) \log \frac{p(x,y)}{p(x)p(y)}
-\end{align}
-$$
-</p><p>相对熵描述了当真实分布为$p$而假定分布是$q$时的无效性，或者说是分布$p$和$q$之间的“距离”。例如已知随机变量的真实分布为$p$，那么可以构造平均长度为$H(p)$的码，但如果使用针对分布为$q$的编码，那么在平均意义上就需要使用$H(p)+D(p \Vert q)$比特来描述这个随机变量。</p>
-<p>
-$$
-\begin{align}
-D(p \Vert q) &amp;= \sum_{x \in \mathcal{X}}{p(x)\log \frac{p(x)}{q(x)}} \\
-&amp;= \sum_{x \in \mathcal{X}}{p(x)\log p(x)} - \sum_{x \in \mathcal{X}}{p(x)\log q(x)} \\
-&amp;= -H(p)+H(p,q)
-\end{align}
-$$
-</p><p>即$H(p)&#x3D;H(p,q)+D(p \Vert q)$，这里$H(p,q)$为交叉熵。</p>
-<h1 id="2-4-熵与互信息量的关系"><a href="#2-4-熵与互信息量的关系" class="headerlink" title="2.4 熵与互信息量的关系"></a>2.4 熵与互信息量的关系</h1><p>
-$$
-\begin{align}
-I(X;Y) &amp;= \sum_{x \in \mathcal{X}} \sum_{y \in \mathcal{Y}} {p(x,y)\log \frac{p(x,y)}{p(x)p(y)}} \\
-&amp;= \sum_{x \in \mathcal{X}} \sum_{y \in \mathcal{Y}} {p(x,y)\log \frac{p(x)p(y|x)}{p(x)p(y)}} \\
-&amp;= \sum_{x \in \mathcal{X}} \sum_{y \in \mathcal{Y}} {p(x,y) \log p(y|x)} - \sum_{x \in \mathcal{X}} \sum_{y \in \mathcal{Y}} {p(x,y)\log p(y) } \\
-&amp;= \sum_{x \in \mathcal{X}} \sum_{y \in \mathcal{Y}} {p(x,y) \log p(y|x)} - \sum_{y \in \mathcal{Y}} {p(y)\log p(y) } \\
-&amp;= H(Y)-H(Y|X) \\
-&amp;= H(X)-H(X|Y)
-\end{align}
-$$
-</p><p>互信息量在公式上表现为随机变量$X$的不确定度减去随机变量$X$在得知条件$Y$下的不确定度，即互信息量表示的是$X$从$Y$中获取到的信息</p>
-<h1 id="2-5-相对熵与互信息的链式法则"><a href="#2-5-相对熵与互信息的链式法则" class="headerlink" title="2.5 相对熵与互信息的链式法则"></a>2.5 相对熵与互信息的链式法则</h1><h3 id="相对熵的链式法则"><a href="#相对熵的链式法则" class="headerlink" title="相对熵的链式法则"></a>相对熵的链式法则</h3><p>
-$$
-\begin{align}
-&amp;D(p(x,y)||q(x,y)) \\
-&amp;= \sum_x \sum_y p(x,y) \log \frac{p(x,y)}{q(x,y)} \\
-&amp;= \sum_x \sum_y p(x,y) \log \frac{p(x)p(y|x)}{q(x)q(y|x)} \\
-&amp;= \sum_x \sum_y p(x,y) \log \frac{p(x)}{q(x)} + \sum_x p(x) \sum_y p(y|x) \log \frac{p(y|x)}{q(y|x)} \\
-&amp;= D(p(x) \Vert q(x)) +D(p(y|x) \Vert q(y|x))
-\end{align}
-$$
-</p><h3 id="互信息的链式法则"><a href="#互信息的链式法则" class="headerlink" title="互信息的链式法则"></a>互信息的链式法则</h3><p>
-$$
-\begin{align}
-&amp;I(X_1,X_2,\dots,X_n;Y) \\
-&amp;=H(X_1,X_2,\dots,X_n)-H(X_1,X_2,\dots,X_n|Y) \\
-&amp;=\sum_{i-1}^n H(X_i|X_1,\dots,X_{i-1}) - \sum_{i-1}^n H(X_i|X_1,\dots,X_{i-1}|,Y) \\
-&amp;=\sum_{i-1}^n I(X_i;Y|X_1,\dots,X_{i-1})
-\end{align}
-$$
-</p><h1 id="2-6-Jensen不等式"><a href="#2-6-Jensen不等式" class="headerlink" title="2.6 Jensen不等式"></a>2.6 Jensen不等式</h1><h3 id="凸函数"><a href="#凸函数" class="headerlink" title="凸函数"></a>凸函数</h3><p>对于任意的$x_1,x_2 \in (a,b)$及$0 \leq \lambda \leq 1$，如果满足</p>
-<p>
-$$
-f(\lambda x_1 +(1-\lambda) x_2) \leq \lambda f(x_1 )+ (1-\lambda) f(x_2)
-$$
-</p><p>则称函数$f(x)$在区间$(a,b)$上是凸的。如果上述不等式仅在$\lambda &#x3D; 0$或$\lambda &#x3D; 1$时取得等号，那么称函数$f(x)$在区间$(a,b)$上是严格凸的。如果函数$-f$为凸函数，则称函数f是凹的。</p>
-<p>函数的凹凸性可由其二阶导判断</p>
-<p>将函数$f$在点$x_0$处泰勒展开</p>
-<p>
-$$
-f(x) = f(x_0)+f'(x_0)(x-x_0)+\frac{f''(x^*)}{2}(x-x_0)^2
-$$
-</p><p>其中$x^*$位于$x$与$x_0$之间。假设$f’’(x^*) \geq 0$，则有</p>
-<p>
-$$
-f(x) \geq f(x_0)+f'(x_0)(x-x_0)
-$$
-</p><p>设$x_0 &#x3D; \lambda x_1 +(1-\lambda)x_2$，取$x&#x3D;x_1$和$x&#x3D;x_2$，可得</p>
-<p>
-$$
-\begin{array}{c}
-f(x_1) \geq f(x_0)+f'(x_0)((1-\lambda)(x_1-x_2)) \\
-\\
-f(x_2) \geq f(x_0)+f'(x_0)(\lambda(x_2-x_1))
-\end{array}
-$$
-</p><p>则有</p>
-<p>
-$$
-\begin{align}
-&amp;\lambda f(x_1) +(1-\lambda) f(x_2) \\
-&amp;\geq \lambda f(x_0) + (1-\lambda)f(x_0)+\lambda(1-\lambda)(x_2-x_1+x_1-x_2)f'(x_0) \\
-&amp;=f(\lambda x_1 + (1-\lambda) x_2)
-\end{align}
-$$
-</p><h3 id="Jensen不等式"><a href="#Jensen不等式" class="headerlink" title="Jensen不等式"></a>Jensen不等式</h3><p>若给定一个凸函数$f$和一个随机变量$X$，则</p>
-<p>
-$$
-E(f(X)) \geq f(E(X))
-$$
-</p>
+</p><p>这就是韦达定理在n次多项式的推广</p>
+
                 
               </div>
             
@@ -626,41 +358,6 @@ $$
             <div>
               <div class="post-metas my-3">
   
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E7%AC%94%E8%AE%B0/" class="category-chain-item">笔记</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/%E7%AC%94%E8%AE%B0/%E4%BF%A1%E6%81%AF%E8%AE%BA%E5%9F%BA%E7%A1%80/" class="category-chain-item">信息论基础</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
-  
-  
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/%E4%BF%A1%E6%81%AF%E8%AE%BA%E5%9F%BA%E7%A1%80/" class="print-no-link">#信息论基础</a>
-      
-    </div>
   
 </div>
 
@@ -670,8 +367,8 @@ $$
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>信息论基础——第二章</div>
-      <div>https://simpleclover.github.io/2025/05/15/信息论基础/Chapter2/</div>
+      <div>韦达定理扩展</div>
+      <div>https://simpleclover.github.io/2025/10/27/韦达定理扩展/</div>
     </div>
     <div class="license-meta">
       
@@ -683,7 +380,7 @@ $$
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年5月15日</div>
+          <div>2025年10月27日</div>
         </div>
       
       
@@ -727,18 +424,12 @@ $$
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/10/27/%E9%9F%A6%E8%BE%BE%E5%AE%9A%E7%90%86%E6%89%A9%E5%B1%95/" title="韦达定理扩展">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">韦达定理扩展</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/04/30/%E4%BF%A1%E6%81%AF%E8%AE%BA%E5%9F%BA%E7%A1%80/%E4%BF%A1%E6%81%AF%E8%AE%BA%E7%BB%AA%E8%AE%BA/" title="信息论基础——绪论">
-                        <span class="hidden-mobile">信息论基础——绪论</span>
+                      <a href="/2025/05/15/%E4%BF%A1%E6%81%AF%E8%AE%BA%E5%9F%BA%E7%A1%80/Chapter2/" title="信息论基础——第二章">
+                        <span class="hidden-mobile">信息论基础——第二章</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -749,49 +440,6 @@ $$
             </div>
 
             
-  
-  
-    <article id="comments" lazyload>
-      
-    <div id="giscus" class="giscus"></div>
-    <script type="text/javascript">
-      Fluid.utils.loadComments('#giscus', function() {
-        var options = {"repo":"simpleClover/simpleClover.github.io","repo-id":"R_kgDOOGFq2Q","category":"Announcements","category-id":"DIC_kwDOOGFq2c4ComHQ","theme-light":"light","theme-dark":"dark","mapping":"pathname","reactions-enabled":1,"emit-metadata":0,"input-position":"top","lang":"zh-CN"};
-        var attributes = {};
-        for (let option in options) {
-          if (!option.startsWith('theme-')) {
-            var key = option.startsWith('data-') ? option : 'data-' + option;
-            attributes[key] = options[option];
-          }
-        }
-        var light = 'light';
-        var dark = 'dark';
-        window.GiscusThemeLight = light;
-        window.GiscusThemeDark = dark;
-        attributes['data-theme'] = document.documentElement.getAttribute('data-user-color-scheme') === 'dark' ? dark : light;
-        for (let attribute in attributes) {
-          var value = attributes[attribute];
-          if (value === undefined || value === null || value === '') {
-            delete attributes[attribute];
-          }
-        }
-        var s = document.createElement('script');
-        s.setAttribute('src', 'https://giscus.app/client.js');
-        s.setAttribute('crossorigin', 'anonymous');
-        for (let attribute in attributes) {
-          s.setAttribute(attribute, attributes[attribute]);
-        }
-        var ss = document.getElementsByTagName('script');
-        var e = ss.length > 0 ? ss[ss.length - 1] : document.head || document.documentElement;
-        e.parentNode.insertBefore(s, e.nextSibling);
-      });
-    </script>
-    <noscript>Please enable JavaScript to view the comments</noscript>
-
-
-    </article>
-  
-
 
           </article>
         </div>
