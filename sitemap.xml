@@ -67,7 +67,7 @@
 
   <url>
     <loc>https://simpleclover.github.io/</loc>
-    <lastmod>2025-05-21</lastmod>
+    <lastmod>2025-10-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -75,42 +75,42 @@
   
   <url>
     <loc>https://simpleclover.github.io/tags/blog/</loc>
-    <lastmod>2025-05-21</lastmod>
+    <lastmod>2025-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://simpleclover.github.io/tags/%E8%AF%AD%E6%B3%95/</loc>
-    <lastmod>2025-05-21</lastmod>
+    <lastmod>2025-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://simpleclover.github.io/tags/markdown/</loc>
-    <lastmod>2025-05-21</lastmod>
+    <lastmod>2025-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://simpleclover.github.io/tags/%E4%BF%A1%E6%81%AF%E8%AE%BA%E5%9F%BA%E7%A1%80/</loc>
-    <lastmod>2025-05-21</lastmod>
+    <lastmod>2025-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://simpleclover.github.io/tags/%E5%BE%AE%E6%B3%A2%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2025-05-21</lastmod>
+    <lastmod>2025-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://simpleclover.github.io/tags/%E7%9F%A9%E5%BD%A2%E6%B3%A2%E5%AF%BC/</loc>
-    <lastmod>2025-05-21</lastmod>
+    <lastmod>2025-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -119,28 +119,28 @@
   
   <url>
     <loc>https://simpleclover.github.io/categories/%E6%9D%82%E9%A1%B9/</loc>
-    <lastmod>2025-05-21</lastmod>
+    <lastmod>2025-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://simpleclover.github.io/categories/%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2025-05-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://simpleclover.github.io/categories/%E7%AC%94%E8%AE%B0/%E4%BF%A1%E6%81%AF%E8%AE%BA%E5%9F%BA%E7%A1%80/</loc>
-    <lastmod>2025-05-21</lastmod>
+    <lastmod>2025-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://simpleclover.github.io/categories/%E7%AC%94%E8%AE%B0/%E5%BE%AE%E6%B3%A2%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2025-05-21</lastmod>
+    <lastmod>2025-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://simpleclover.github.io/categories/%E7%AC%94%E8%AE%B0/%E4%BF%A1%E6%81%AF%E8%AE%BA%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2025-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
